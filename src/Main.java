@@ -19,10 +19,10 @@ public class Main {
 		vistaBorrarEstu.setControlador(controlador);
 		vistaMenuTutor.setControlador(controlador);
 		
-		controlador.setvistaInicial(vistaInicial);
-		controlador.setvistaActualizar(vistaActualizarEstu);
-		controlador.setvistaAlta(vistaAltaEstu);
-		controlador.setvistaBorrar(vistaBorrarEstu);
-		controlador.setvistaMenu(vistaMenuTutor);
+		controlador.setVentanaLogin(vistaInicial);
+		controlador.setActualizarEstudiante(vistaActualizarEstu);
+		controlador.setAltaEstudiante(vistaAltaEstu);
+		controlador.setBorrarEstudiante(vistaBorrarEstu);
+		controlador.setMenuTutor(vistaMenuTutor);
 	}
 }

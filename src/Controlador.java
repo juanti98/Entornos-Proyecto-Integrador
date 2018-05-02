@@ -1,5 +1,9 @@
 
 public class Controlador {
+	
+	public Controlador() {
+		super();
+	}
 
 	private ActualizarEstudiante ActEst;
 	private AltaEstudiante AltaEst;
@@ -7,23 +11,23 @@ public class Controlador {
 	private MenuTutor MenuTutor;
 	private VentanaLogin VentLogin;
 
-	public void setvistaInicial(VentanaLogin vistaInicial) {
+	public void setVentanaLogin(VentanaLogin vistaInicial) {
 		this.VentLogin = vistaInicial;
 	}
 
-	public void setvistaActualizar(ActualizarEstudiante vistaActualizar) {
+	public void setActualizarEstudiante(ActualizarEstudiante vistaActualizar) {
 		this.ActEst = vistaActualizar;
 	}
 
-	public void setvistaAlta(AltaEstudiante vistaAltaEstu) {
+	public void setAltaEstudiante(AltaEstudiante vistaAltaEstu) {
 		this.AltaEst = vistaAltaEstu;
 	}
 
-	public void setvistaBorrar(BorrarEstudiante vistaBorrar) {
+	public void setBorrarEstudiante(BorrarEstudiante vistaBorrar) {
 		this.BorrarEst = vistaBorrar;
 	}
 
-	public void setvistaMenu(MenuTutor vistaMenu) {
+	public void setMenuTutor(MenuTutor vistaMenu) {
 		this.MenuTutor = vistaMenu;
 	}
 
