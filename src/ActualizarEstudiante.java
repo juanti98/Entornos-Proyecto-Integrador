@@ -16,22 +16,7 @@ public class ActualizarEstudiante extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtNumMat;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ActualizarEstudiante frame = new ActualizarEstudiante();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private Controlador controlador;
 
 	/**
 	 * Create the frame.
@@ -43,25 +28,25 @@ public class ActualizarEstudiante extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel lblNmeroDeMatrcula = new JLabel("N\u00FAmero de Matr\u00EDcula:");
 		lblNmeroDeMatrcula.setBounds(53, 69, 102, 14);
 		contentPane.add(lblNmeroDeMatrcula);
-		
+
 		txtNumMat = new JTextField();
 		txtNumMat.setBounds(165, 66, 86, 20);
 		contentPane.add(txtNumMat);
 		txtNumMat.setColumns(10);
-		
+
 		JLabel lblEstado = new JLabel("Estado:");
 		lblEstado.setBounds(53, 100, 46, 14);
 		contentPane.add(lblEstado);
-		
+
 		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Pendiente", "En pr\u00E1cticas", "Finalizado"}));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] { "Pendiente", "En pr\u00E1cticas", "Finalizado" }));
 		comboBox.setBounds(165, 97, 86, 20);
 		contentPane.add(comboBox);
-		
+
 		JButton btnActualizarEstado = new JButton("Actualizar Estado");
 		btnActualizarEstado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -72,6 +57,11 @@ public class ActualizarEstudiante extends JFrame {
 		});
 		btnActualizarEstado.setBounds(150, 157, 115, 23);
 		contentPane.add(btnActualizarEstado);
+	}
+
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
+
 	}
 
 }

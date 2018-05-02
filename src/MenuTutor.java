@@ -15,22 +15,7 @@ public class MenuTutor extends JFrame {
 
 	private JPanel contentPane;
 	private JTable tableEstudiantes;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MenuTutor frame = new MenuTutor();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private Controlador controlador;
 
 	/**
 	 * Create the frame.
@@ -42,22 +27,16 @@ public class MenuTutor extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(10, 95, 414, 130);
 		contentPane.add(scrollPane);
-		
+
 		tableEstudiantes = new JTable();
-		tableEstudiantes.setModel(new DefaultTableModel(
-			new Object[][] {
-			},
-			new String[] {
-				"Nombre", "Apellido", "DNI/NIF", "N\u00FAmero de matr\u00EDcula", "Estado"
-			}
-		) {
-			Class[] columnTypes = new Class[] {
-				String.class, String.class, String.class, Object.class, String.class
-			};
+		tableEstudiantes.setModel(new DefaultTableModel(new Object[][] {},
+				new String[] { "Nombre", "Apellido", "DNI/NIF", "N\u00FAmero de matr\u00EDcula", "Estado" }) {
+			Class[] columnTypes = new Class[] { String.class, String.class, String.class, Object.class, String.class };
+
 			public Class getColumnClass(int columnIndex) {
 				return columnTypes[columnIndex];
 			}
@@ -65,7 +44,7 @@ public class MenuTutor extends JFrame {
 		tableEstudiantes.getColumnModel().getColumn(2).setPreferredWidth(86);
 		tableEstudiantes.getColumnModel().getColumn(3).setPreferredWidth(111);
 		scrollPane.setViewportView(tableEstudiantes);
-		
+
 		JButton btnAadirEstudiante = new JButton("A\u00F1adir estudiante");
 		btnAadirEstudiante.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -76,7 +55,7 @@ public class MenuTutor extends JFrame {
 		});
 		btnAadirEstudiante.setBounds(10, 61, 122, 23);
 		contentPane.add(btnAadirEstudiante);
-		
+
 		JButton btnActualizarEstado = new JButton("Actualizar estado");
 		btnActualizarEstado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -87,7 +66,7 @@ public class MenuTutor extends JFrame {
 		});
 		btnActualizarEstado.setBounds(165, 61, 115, 23);
 		contentPane.add(btnActualizarEstado);
-		
+
 		JButton btnBorrarEstudiante = new JButton("Borrar estudiante");
 		btnBorrarEstudiante.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -98,5 +77,10 @@ public class MenuTutor extends JFrame {
 		});
 		btnBorrarEstudiante.setBounds(305, 61, 119, 23);
 		contentPane.add(btnBorrarEstudiante);
+	}
+
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
+
 	}
 }

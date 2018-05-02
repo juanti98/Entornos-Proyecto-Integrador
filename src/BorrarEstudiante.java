@@ -14,22 +14,7 @@ public class BorrarEstudiante extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtNumMat;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					BorrarEstudiante frame = new BorrarEstudiante();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private Controlador controlador;
 
 	/**
 	 * Create the frame.
@@ -61,6 +46,11 @@ public class BorrarEstudiante extends JFrame {
 		});
 		btnBorrarEstudiante.setBounds(148, 131, 117, 23);
 		contentPane.add(btnBorrarEstudiante);
+	}
+
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
+
 	}
 
 }
