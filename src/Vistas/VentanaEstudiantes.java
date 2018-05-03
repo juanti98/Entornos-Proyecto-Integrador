@@ -27,17 +27,17 @@ public class VentanaEstudiantes extends JFrame {
 	private JPanel contentPane;
 	private JTable tableEstudiantes;
 	private Controlador controlador;
-	public JTextField txtDNI;
-	public JTextField txtMat;
-	public JTextField txtApellido;
-	public JTextField txtNombre;
+	private JTextField txtDNI;
+	private JTextField txtMat;
+	private JTextField txtApellido;
+	private JTextField txtNombre;
 	private JButton btnMostrarCuestionario;
-	public JLabel lblNombre;
-	public JLabel lblApellido;
-	public JLabel lblDninif;
-	public JLabel lblNMatrcula;
-	public JLabel lblEstado;
-	public JComboBox comboBox;
+	private JLabel lblNombre;
+	private JLabel lblApellido;
+	private JLabel lblDninif;
+	private JLabel lblNMatrcula;
+	private JLabel lblEstado;
+	private JComboBox comboBox;
 
 	/**
 	 * Create the frame.
@@ -91,65 +91,65 @@ public class VentanaEstudiantes extends JFrame {
 		btnAadirEstudiante.setBounds(151, 61, 122, 23);
 		contentPane.add(btnAadirEstudiante);
 		
-		lblNombre = new JLabel("Nombre:");
-		lblNombre.setVisible(false);
-		lblNombre.setBounds(48, 236, 65, 14);
-		contentPane.add(lblNombre);
+		setLblNombre(new JLabel("Nombre:"));
+		getLblNombre().setVisible(false);
+		getLblNombre().setBounds(48, 236, 65, 14);
+		contentPane.add(getLblNombre());
 		
-		lblApellido = new JLabel("Apellido:");
-		lblApellido.setVisible(false);
-		lblApellido.setBounds(48, 261, 65, 14);
-		contentPane.add(lblApellido);
+		setLblApellido(new JLabel("Apellido:"));
+		getLblApellido().setVisible(false);
+		getLblApellido().setBounds(48, 261, 65, 14);
+		contentPane.add(getLblApellido());
 		
-		lblDninif = new JLabel("DNI/NIF:");
-		lblDninif.setVisible(false);
-		lblDninif.setBounds(48, 286, 65, 14);
-		contentPane.add(lblDninif);
+		setLblDninif(new JLabel("DNI/NIF:"));
+		getLblDninif().setVisible(false);
+		getLblDninif().setBounds(48, 286, 65, 14);
+		contentPane.add(getLblDninif());
 		
-		lblNMatrcula = new JLabel("N\u00B7 Matr\u00EDcula:");
-		lblNMatrcula.setVisible(false);
-		lblNMatrcula.setBounds(48, 311, 122, 14);
-		contentPane.add(lblNMatrcula);
+		setLblNMatrcula(new JLabel("N\u00B7 Matr\u00EDcula:"));
+		getLblNMatrcula().setVisible(false);
+		getLblNMatrcula().setBounds(48, 311, 122, 14);
+		contentPane.add(getLblNMatrcula());
 		
-		lblEstado = new JLabel("Estado:");
-		lblEstado.setVisible(false);
-		lblEstado.setBounds(48, 336, 65, 14);
-		contentPane.add(lblEstado);
+		setLblEstado(new JLabel("Estado:"));
+		getLblEstado().setVisible(false);
+		getLblEstado().setBounds(48, 336, 65, 14);
+		contentPane.add(getLblEstado());
 		
-		txtNombre = new JTextField();
-		txtNombre.setVisible(false);
-		txtNombre.setBounds(151, 233, 86, 20);
-		contentPane.add(txtNombre);
-		txtNombre.setColumns(10);
+		setTxtNombre(new JTextField());
+		getTxtNombre().setVisible(false);
+		getTxtNombre().setBounds(151, 233, 86, 20);
+		contentPane.add(getTxtNombre());
+		getTxtNombre().setColumns(10);
 		
-		txtApellido = new JTextField();
-		txtApellido.setVisible(false);
-		txtApellido.setBounds(151, 258, 86, 20);
-		contentPane.add(txtApellido);
-		txtApellido.setColumns(10);
+		setTxtApellido(new JTextField());
+		getTxtApellido().setVisible(false);
+		getTxtApellido().setBounds(151, 258, 86, 20);
+		contentPane.add(getTxtApellido());
+		getTxtApellido().setColumns(10);
 		
-		txtDNI = new JTextField();
-		txtDNI.setVisible(false);
-		txtDNI.setBounds(151, 283, 86, 20);
-		contentPane.add(txtDNI);
-		txtDNI.setColumns(10);
+		setTxtDNI(new JTextField());
+		getTxtDNI().setVisible(false);
+		getTxtDNI().setBounds(151, 283, 86, 20);
+		contentPane.add(getTxtDNI());
+		getTxtDNI().setColumns(10);
 		
-		txtMat = new JTextField();
-		txtMat.setVisible(false);
-		txtMat.setBounds(151, 308, 86, 20);
-		contentPane.add(txtMat);
-		txtMat.setColumns(10);
+		setTxtMat(new JTextField());
+		getTxtMat().setVisible(false);
+		getTxtMat().setBounds(151, 308, 86, 20);
+		contentPane.add(getTxtMat());
+		getTxtMat().setColumns(10);
 		
-		comboBox = new JComboBox();
-		comboBox.setVisible(false);
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Pendiente", "En pr\u00E1cticas", "Finalizado"}));
-		comboBox.setBounds(151, 333, 86, 17);
-		contentPane.add(comboBox);
+		setComboBox(new JComboBox());
+		getComboBox().setVisible(false);
+		getComboBox().setModel(new DefaultComboBoxModel(new String[] {"Pendiente", "En pr\u00E1cticas", "Finalizado"}));
+		getComboBox().setBounds(151, 333, 86, 17);
+		contentPane.add(getComboBox());
 		
 		btnMostrarCuestionario = new JButton("Mostrar Cuestionario");
 		btnMostrarCuestionario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtDNI.setVisible(true);
+				getTxtDNI().setVisible(true);
 				controlador.mostrarCuestionario();
 			}
 		});
@@ -160,5 +160,85 @@ public class VentanaEstudiantes extends JFrame {
 	public void setControlador(Controlador controlador) {
 		this.controlador = controlador;
 
+	}
+
+	public JTextField getTxtDNI() {
+		return txtDNI;
+	}
+
+	public void setTxtDNI(JTextField txtDNI) {
+		this.txtDNI = txtDNI;
+	}
+
+	public JTextField getTxtMat() {
+		return txtMat;
+	}
+
+	public void setTxtMat(JTextField txtMat) {
+		this.txtMat = txtMat;
+	}
+
+	public JTextField getTxtApellido() {
+		return txtApellido;
+	}
+
+	public void setTxtApellido(JTextField txtApellido) {
+		this.txtApellido = txtApellido;
+	}
+
+	public JLabel getLblNombre() {
+		return lblNombre;
+	}
+
+	public void setLblNombre(JLabel lblNombre) {
+		this.lblNombre = lblNombre;
+	}
+
+	public JTextField getTxtNombre() {
+		return txtNombre;
+	}
+
+	public void setTxtNombre(JTextField txtNombre) {
+		this.txtNombre = txtNombre;
+	}
+
+	public JLabel getLblApellido() {
+		return lblApellido;
+	}
+
+	public void setLblApellido(JLabel lblApellido) {
+		this.lblApellido = lblApellido;
+	}
+
+	public JLabel getLblNMatrcula() {
+		return lblNMatrcula;
+	}
+
+	public void setLblNMatrcula(JLabel lblNMatrcula) {
+		this.lblNMatrcula = lblNMatrcula;
+	}
+
+	public JLabel getLblDninif() {
+		return lblDninif;
+	}
+
+	public void setLblDninif(JLabel lblDninif) {
+		this.lblDninif = lblDninif;
+	}
+
+	public JLabel getLblEstado() {
+		return lblEstado;
+	}
+
+	public void setLblEstado(JLabel lblEstado) {
+		this.lblEstado = lblEstado;
+	}
+
+	public JComboBox getComboBox() {
+		return comboBox;
+	}
+
+	public void setComboBox(JComboBox comboBox) {
+		this.comboBox = comboBox;
 	}
 }

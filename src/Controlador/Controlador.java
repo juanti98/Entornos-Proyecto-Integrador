@@ -43,16 +43,16 @@ public class Controlador {
 	}
 	
 	public void mostrarCuestionario(){
-		MenuTutor.txtDNI.setVisible(true);
-		MenuTutor.txtMat.setVisible(true);
-		MenuTutor.txtApellido.setVisible(true);
-		MenuTutor.txtNombre.setVisible(true);
-		MenuTutor.lblNombre.setVisible(true);
-		MenuTutor.lblApellido.setVisible(true);
-		MenuTutor.lblDninif.setVisible(true);
-		MenuTutor.lblNMatrcula.setVisible(true);
-		MenuTutor.lblEstado.setVisible(true);
-		MenuTutor.comboBox.setVisible(true);
+		MenuTutor.getTxtDNI().setVisible(true);
+		MenuTutor.getTxtMat().setVisible(true);
+		MenuTutor.getTxtApellido().setVisible(true);
+		MenuTutor.getTxtNombre().setVisible(true);
+		MenuTutor.getLblNombre().setVisible(true);
+		MenuTutor.getLblApellido().setVisible(true);
+		MenuTutor.getLblDninif().setVisible(true);
+		MenuTutor.getLblNMatrcula().setVisible(true);
+		MenuTutor.getLblEstado().setVisible(true);
+		MenuTutor.getComboBox().setVisible(true);
 	}
 	
 	public void irAAnadir(){
