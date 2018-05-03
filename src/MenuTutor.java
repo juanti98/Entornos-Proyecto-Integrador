@@ -50,9 +50,7 @@ public class MenuTutor extends JFrame {
 		JButton btnAadirEstudiante = new JButton("A\u00F1adir estudiante");
 		btnAadirEstudiante.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MenuTutor.this.dispose();
-				AltaEstudiante alta = new AltaEstudiante();
-				alta.setVisible(true);
+				controlador.irAAnadir();
 			}
 		});
 		btnAadirEstudiante.setBounds(10, 61, 122, 23);
@@ -61,9 +59,7 @@ public class MenuTutor extends JFrame {
 		JButton btnActualizarEstado = new JButton("Actualizar estado");
 		btnActualizarEstado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MenuTutor.this.dispose();
-				ActualizarEstudiante actu = new ActualizarEstudiante();
-				actu.setVisible(true);
+				controlador.irAActualizar();
 			}
 		});
 		btnActualizarEstado.setBounds(165, 61, 115, 23);
@@ -72,9 +68,7 @@ public class MenuTutor extends JFrame {
 		JButton btnBorrarEstudiante = new JButton("Borrar estudiante");
 		btnBorrarEstudiante.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MenuTutor.this.dispose();
-				BorrarEstudiante baja = new BorrarEstudiante();
-				baja.setVisible(true);
+				controlador.irABorrar();
 			}
 		});
 		btnBorrarEstudiante.setBounds(305, 61, 119, 23);

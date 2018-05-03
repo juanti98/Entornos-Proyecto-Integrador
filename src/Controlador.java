@@ -1,5 +1,5 @@
 public class Controlador {
-	
+
 	public Controlador() {
 		super();
 	}
@@ -9,6 +9,7 @@ public class Controlador {
 	private BorrarEstudiante BorrarEst;
 	private MenuTutor MenuTutor;
 	private VentanaLogin VentLogin;
+
 
 	public void setVentanaLogin(VentanaLogin vistaInicial) {
 		this.VentLogin = vistaInicial;
@@ -32,10 +33,27 @@ public class Controlador {
 
 	public void log() {
 		VentLogin.dispose();
-		MenuTutor menu = new MenuTutor();
-		menu.setVisible(true);
+		MenuTutor.setVisible(true);
 	}
-	 
 
+	public void botonVolver() {
+		AltaEst.setVisible(false);
+		MenuTutor.setVisible(true);
+	}
 	
+	public void irAActualizar(){
+		MenuTutor.setVisible(false);
+		ActEst.setVisible(true);
+	}
+	
+	public void irAAnadir(){
+		MenuTutor.setVisible(false);	
+		AltaEst.setVisible(true);
+	}
+	
+	public void irABorrar(){	
+		MenuTutor.setVisible(false);
+		BorrarEst.setVisible(true);
+	}
+
 }

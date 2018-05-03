@@ -25,6 +25,7 @@ public class AltaEstudiante extends JFrame {
 	private JButton btnAadirEstudiante;
 
 	private Controlador controlador;
+	private JButton btnVolver;
 
 
 	/**
@@ -84,15 +85,15 @@ public class AltaEstudiante extends JFrame {
 		contentPane.add(comboBox);
 
 		btnAadirEstudiante = new JButton("A\u00F1adir estudiante");
-		btnAadirEstudiante.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
 		btnAadirEstudiante.setBounds(187, 172, 117, 23);
 		contentPane.add(btnAadirEstudiante);
 
-		JButton btnVolver = new JButton("Volver");
+		btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				controlador.botonVolver();
+			}
+		});
 		btnVolver.setBounds(76, 172, 86, 23);
 		contentPane.add(btnVolver);
 	}
