@@ -38,7 +38,7 @@ public class AltaCiclos extends JFrame {
 	 */
 	public AltaCiclos() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 247);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -81,11 +81,11 @@ public class AltaCiclos extends JFrame {
 		txtNombreFamiliaProfesional.setColumns(10);
 		
 		JButton btnVolver = new JButton("Volver");
-		btnVolver.setBounds(48, 202, 122, 23);
+		btnVolver.setBounds(70, 168, 122, 23);
 		contentPane.add(btnVolver);
 		
 		JButton btnDarDeAlta = new JButton("Dar de Alta");
-		btnDarDeAlta.setBounds(256, 202, 109, 23);
+		btnDarDeAlta.setBounds(240, 168, 109, 23);
 		contentPane.add(btnDarDeAlta);
 	}
 }

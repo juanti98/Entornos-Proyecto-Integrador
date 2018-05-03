@@ -49,6 +49,7 @@ public class VentanaEstudiantes extends JFrame {
 	private JLabel lblEstado;
 	private JComboBox comboBox;
 	private DefaultTableModel miModelo;
+	private JButton btnVolver;
 
 	/**
 	 * Create the frame.
@@ -62,7 +63,7 @@ public class VentanaEstudiantes extends JFrame {
 		contentPane.setLayout(null);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 95, 414, 130);
+		scrollPane.setBounds(10, 11, 414, 130);
 		contentPane.add(scrollPane);
 
 		tableEstudiantes = new JTable();
@@ -112,55 +113,55 @@ public class VentanaEstudiantes extends JFrame {
 				controlador.irAAnadir();
 			}
 		});
-		btnAadirEstudiante.setBounds(151, 61, 122, 23);
+		btnAadirEstudiante.setBounds(209, 313, 122, 23);
 		contentPane.add(btnAadirEstudiante);
 
 		setLblNombre(new JLabel("Nombre:"));
 		getLblNombre().setVisible(false);
-		getLblNombre().setBounds(48, 236, 65, 14);
+		getLblNombre().setBounds(20, 162, 65, 14);
 		contentPane.add(getLblNombre());
 
 		setLblApellido(new JLabel("Apellido:"));
 		getLblApellido().setVisible(false);
-		getLblApellido().setBounds(48, 261, 65, 14);
+		getLblApellido().setBounds(20, 187, 65, 14);
 		contentPane.add(getLblApellido());
 
 		setLblDninif(new JLabel("DNI/NIF:"));
 		getLblDninif().setVisible(false);
-		getLblDninif().setBounds(48, 286, 65, 14);
+		getLblDninif().setBounds(20, 212, 65, 14);
 		contentPane.add(getLblDninif());
 
 		setLblNMatrcula(new JLabel("N\u00B7 Matr\u00EDcula:"));
 		getLblNMatrcula().setVisible(false);
-		getLblNMatrcula().setBounds(48, 311, 122, 14);
+		getLblNMatrcula().setBounds(20, 237, 122, 14);
 		contentPane.add(getLblNMatrcula());
 
 		setLblEstado(new JLabel("Estado:"));
 		getLblEstado().setVisible(false);
-		getLblEstado().setBounds(48, 336, 65, 14);
+		getLblEstado().setBounds(20, 262, 65, 14);
 		contentPane.add(getLblEstado());
 
 		setTxtNombre(new JTextField());
 		getTxtNombre().setVisible(false);
-		getTxtNombre().setBounds(151, 233, 86, 20);
+		getTxtNombre().setBounds(123, 159, 86, 20);
 		contentPane.add(getTxtNombre());
 		getTxtNombre().setColumns(10);
 
 		setTxtApellido(new JTextField());
 		getTxtApellido().setVisible(false);
-		getTxtApellido().setBounds(151, 258, 86, 20);
+		getTxtApellido().setBounds(123, 184, 86, 20);
 		contentPane.add(getTxtApellido());
 		getTxtApellido().setColumns(10);
 
 		setTxtDNI(new JTextField());
 		getTxtDNI().setVisible(false);
-		getTxtDNI().setBounds(151, 283, 86, 20);
+		getTxtDNI().setBounds(123, 209, 86, 20);
 		contentPane.add(getTxtDNI());
 		getTxtDNI().setColumns(10);
 
 		setTxtMat(new JTextField());
 		getTxtMat().setVisible(false);
-		getTxtMat().setBounds(151, 308, 86, 20);
+		getTxtMat().setBounds(123, 234, 86, 20);
 		contentPane.add(getTxtMat());
 		getTxtMat().setColumns(10);
 
@@ -168,7 +169,7 @@ public class VentanaEstudiantes extends JFrame {
 		getComboBox().setVisible(false);
 		getComboBox()
 				.setModel(new DefaultComboBoxModel(new String[] { "Pendiente", "En pr\u00E1cticas", "Finalizado" }));
-		getComboBox().setBounds(151, 333, 86, 17);
+		getComboBox().setBounds(123, 259, 86, 17);
 		contentPane.add(getComboBox());
 
 		btnMostrarCuestionario = new JButton("Mostrar Cuestionario");
@@ -187,8 +188,17 @@ public class VentanaEstudiantes extends JFrame {
 				getComboBox().setVisible(true);
 			}
 		});
-		btnMostrarCuestionario.setBounds(282, 282, 133, 23);
+		btnMostrarCuestionario.setBounds(282, 158, 133, 23);
 		contentPane.add(btnMostrarCuestionario);
+		
+		btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				controlador.botonVolverMenu();
+			}
+		});
+		btnVolver.setBounds(79, 313, 89, 23);
+		contentPane.add(btnVolver);
 	}
 
 	public void setControlador(Controlador controlador) {

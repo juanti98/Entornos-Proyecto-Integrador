@@ -34,20 +34,20 @@ public class AltaGrupo extends JFrame{
 		contentPane.setLayout(null);
 
 		JLabel lblCodGrupo = new JLabel("Código Grupo: ");
-		lblCodGrupo.setBounds(25, 23, 72, 14);
+		lblCodGrupo.setBounds(115, 53, 72, 14);
 		contentPane.add(lblCodGrupo);
 
 		JLabel lblAnoAcademico = new JLabel("Año Académico: ");
-		lblAnoAcademico.setBounds(25, 73, 86, 14);
+		lblAnoAcademico.setBounds(115, 103, 86, 14);
 		contentPane.add(lblAnoAcademico);
 
 		txtAnoAcademico = new JTextField();
-		txtAnoAcademico.setBounds(135, 70, 86, 20);
+		txtAnoAcademico.setBounds(225, 100, 86, 20);
 		contentPane.add(txtAnoAcademico);
 		txtAnoAcademico.setColumns(10);
 
 		txtCodGrupo = new JTextField();
-		txtCodGrupo.setBounds(135, 20, 86, 20);
+		txtCodGrupo.setBounds(225, 50, 86, 20);
 		contentPane.add(txtCodGrupo);
 		txtCodGrupo.setColumns(10);
 
