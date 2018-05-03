@@ -3,8 +3,10 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import Vistas.AltaEstudiante;
+import Vistas.MenuTutor;
 import Vistas.VentanaEstudiantes;
 import Vistas.VentanaLogin;
+import Vistas.VisualizarEmpresas;
 
 public class Controlador {
 
@@ -14,8 +16,10 @@ public class Controlador {
 
 
 	private AltaEstudiante AltaEst;
-	private VentanaEstudiantes MenuTutor;
+	private VentanaEstudiantes EstudiantesTutor;
 	private VentanaLogin VentLogin;
+	private Vistas.MenuTutor menuTutor;
+	private VisualizarEmpresas VerEmpresas;
 
 
 	public void setVentanaLogin(VentanaLogin vistaInicial) {
@@ -28,27 +32,59 @@ public class Controlador {
 	}
 
 
-	public void setMenuTutor(VentanaEstudiantes vistaMenu) {
-		this.MenuTutor = vistaMenu;
+	public void setVentanaEstudiante(VentanaEstudiantes vistaMenu) {
+		this.EstudiantesTutor = vistaMenu;
 	}
 
-	public void log() {
+	public void LoginAMenuTutor() {
 		VentLogin.dispose();
-		MenuTutor.setVisible(true);
+		menuTutor.setVisible(true);
 	}
 
-	public void botonVolver() {
+	public void botonVolverMenu() {
+		VerEmpresas.setVisible(false);
 		AltaEst.setVisible(false);
-		MenuTutor.setVisible(true);
+		menuTutor.setVisible(true);
 	}
 	
 
 	
 	public void irAAnadir(){
-		MenuTutor.setVisible(false);	
+		EstudiantesTutor.setVisible(false);	
 		AltaEst.setVisible(true);
 	}
-	
+
+
+	public void TutorAEstudiantes() {
+		menuTutor.setVisible(false);
+		EstudiantesTutor.setVisible(true);
+		
+	}
+
+
+	public void botonVolverVentanaEstudiante() {
+		AltaEst.setVisible(false);
+		EstudiantesTutor.setVisible(true);
+	}
+
+
+	public void TutorAEmpresas() {
+		menuTutor.setVisible(false);
+		VerEmpresas.setVisible(true);
+	}
+
+
+	public void setMenuTutor(MenuTutor menuTutor2) {
+		this.menuTutor=menuTutor2;
+		
+	}
+
+
+	public void setVerEmpresas(VisualizarEmpresas verEmpresas2) {
+		this.VerEmpresas=verEmpresas2;
+		
+	}
+
 
 
 }

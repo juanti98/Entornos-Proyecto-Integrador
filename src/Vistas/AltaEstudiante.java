@@ -108,8 +108,8 @@ public class AltaEstudiante extends JFrame {
 		btnVolver = new JButton("Volver");
 		btnVolver.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				controlador.botonVolver();
-			}
+				controlador.botonVolverVentanaEstudiante();
+				}
 		});
 		btnVolver.setBounds(76, 172, 86, 23);
 		contentPane.add(btnVolver);

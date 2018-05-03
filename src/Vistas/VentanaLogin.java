@@ -79,7 +79,7 @@ public class VentanaLogin extends JFrame {
 		btnSimulacionTutor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (btnSimulacionTutor.isEnabled()) {
-					controlador.log();
+					controlador.LoginAMenuTutor();;
 				}
 
 			}
