@@ -34,6 +34,8 @@ public class Controlador {
 		VentLogin.dispose();
 		MenuTutor menu = new MenuTutor();
 		menu.setVisible(true);
-		
 	}
+	 
+
+	
 }

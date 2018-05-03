@@ -86,9 +86,7 @@ public class AltaEstudiante extends JFrame {
 		btnAadirEstudiante = new JButton("A\u00F1adir estudiante");
 		btnAadirEstudiante.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				AltaEstudiante.this.dispose();
-				MenuTutor menu = new MenuTutor();
-				menu.setVisible(true);
+				
 			}
 		});
 		btnAadirEstudiante.setBounds(187, 172, 117, 23);

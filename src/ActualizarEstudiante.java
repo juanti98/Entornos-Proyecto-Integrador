@@ -44,20 +44,7 @@ public class ActualizarEstudiante extends JFrame {
 		txtNumMat.setBounds(165, 66, 86, 20);
 		contentPane.add(txtNumMat);
 		txtNumMat.setColumns(10);
-<<<<<<< HEAD
-		
-=======
 
-		JLabel lblEstado = new JLabel("Estado:");
-		lblEstado.setBounds(53, 100, 46, 14);
-		contentPane.add(lblEstado);
-
-		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] { "Pendiente", "En pr\u00E1cticas", "Finalizado" }));
-		comboBox.setBounds(165, 97, 86, 20);
-		contentPane.add(comboBox);
-
->>>>>>> branch 'master' of https://github.com/DAM-UEM-1718/ud5-tarea-2-aplicacion-swing-los-golfos.git
 		JButton btnActualizarEstado = new JButton("Actualizar Estado");
 		btnActualizarEstado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -66,7 +53,7 @@ public class ActualizarEstudiante extends JFrame {
 				menu.setVisible(true);
 			}
 		});
-		btnActualizarEstado.setBounds(148, 115, 115, 23);
+		btnActualizarEstado.setBounds(147, 128, 115, 23);
 		contentPane.add(btnActualizarEstado);
 	}
 
