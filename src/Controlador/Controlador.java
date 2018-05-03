@@ -1,3 +1,8 @@
+package Controlador;
+import Vistas.AltaEstudiante;
+import Vistas.VentanaEstudiantes;
+import Vistas.VentanaLogin;
+
 public class Controlador {
 
 	public Controlador() {

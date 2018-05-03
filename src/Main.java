@@ -2,6 +2,11 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
+import Controlador.Controlador;
+import Vistas.AltaEstudiante;
+import Vistas.VentanaEstudiantes;
+import Vistas.VentanaLogin;
+
 public class Main {
 
 	public Main(){
