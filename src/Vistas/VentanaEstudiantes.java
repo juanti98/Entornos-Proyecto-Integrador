@@ -14,6 +14,8 @@ import Controlador.Controlador;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -53,6 +55,21 @@ public class VentanaEstudiantes extends JFrame {
 		contentPane.add(scrollPane);
 
 		tableEstudiantes = new JTable();
+//		tableEstudiantes.addMouseListener(new MouseAdapter() {
+//			public void mouseClicked(MouseEvent e) {
+//				
+//				int row = tableEstudiantes.getSelectedRow();
+//				
+//				String nombre = miModelo.getValueAt(row, 0).toString();
+//				txtNombre.setText(nombre);
+//				
+//				String apellido = miModelo.getValueAt(row, 1).toString();
+//				txtApellido.setText(apellido);
+//				
+//				String telefono = miModelo.getValueAt(row, 2).toString();
+//				txtTelefono.setText(telefono);
+//			}
+//		});
 		tableEstudiantes.setModel(new DefaultTableModel(new Object[][] {},
 				new String[] { "Nombre", "Apellido", "DNI/NIF", "N\u00FAmero de matr\u00EDcula", "Estado" }) {
 			Class[] columnTypes = new Class[] { String.class, String.class, String.class, Object.class, String.class };
