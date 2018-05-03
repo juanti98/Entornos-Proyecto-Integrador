@@ -22,21 +22,7 @@ public class AltaEstudiante extends JFrame {
 	private JComboBox comboBox;
 	private JButton btnAadirEstudiante;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					AltaEstudiante frame = new AltaEstudiante();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+
 
 	/**
 	 * Create the frame.

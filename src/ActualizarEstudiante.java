@@ -17,21 +17,7 @@ public class ActualizarEstudiante extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtNumMat;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ActualizarEstudiante frame = new ActualizarEstudiante();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+
 
 	/**
 	 * Create the frame.
@@ -53,15 +39,6 @@ public class ActualizarEstudiante extends JFrame {
 		contentPane.add(txtNumMat);
 		txtNumMat.setColumns(10);
 		
-		JLabel lblEstado = new JLabel("Estado:");
-		lblEstado.setBounds(53, 100, 46, 14);
-		contentPane.add(lblEstado);
-		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Pendiente", "En pr\u00E1cticas", "Finalizado"}));
-		comboBox.setBounds(165, 97, 86, 20);
-		contentPane.add(comboBox);
-		
 		JButton btnActualizarEstado = new JButton("Actualizar Estado");
 		btnActualizarEstado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -70,7 +47,7 @@ public class ActualizarEstudiante extends JFrame {
 				menu.setVisible(true);
 			}
 		});
-		btnActualizarEstado.setBounds(150, 157, 115, 23);
+		btnActualizarEstado.setBounds(148, 115, 115, 23);
 		contentPane.add(btnActualizarEstado);
 	}
 

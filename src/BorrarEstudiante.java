@@ -15,21 +15,7 @@ public class BorrarEstudiante extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtNumMat;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					BorrarEstudiante frame = new BorrarEstudiante();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+
 
 	/**
 	 * Create the frame.
