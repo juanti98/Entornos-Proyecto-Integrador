@@ -18,7 +18,7 @@ public class AltaGrupo extends JFrame{
 	private JTextField txtCodGrupo;
 	private JButton btnAnadirGrupo;
 
-	private Controlador controlador;
+
 
 
 	/**
@@ -51,13 +51,7 @@ public class AltaGrupo extends JFrame{
 		txtCodGrupo.setColumns(10);
 
 		btnAnadirGrupo = new JButton("Añadir Grupo");
-		btnAnadirGrupo.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				AltaGrupo.this.dispose();
-				VentanaEstudiantes menu = new VentanaEstudiantes();
-				menu.setVisible(true);
-			}
-		});
+
 		btnAnadirGrupo.setBounds(223, 172, 117, 23);
 		contentPane.add(btnAnadirGrupo);
 
@@ -66,8 +60,6 @@ public class AltaGrupo extends JFrame{
 		contentPane.add(btnVolver);
 	}
 
-	public void setControlador(Controlador controlador2) {
-		this.controlador = controlador2;
-	}
+
 }
 
