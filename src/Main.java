@@ -11,7 +11,7 @@ public class Main {
 		VentanaLogin vistaInicial = new VentanaLogin();
 
 		AltaEstudiante vistaAltaEstu = new AltaEstudiante();
-		MenuTutor vistaMenuTutor = new MenuTutor();
+		VentanaEstudiantes vistaMenuTutor = new VentanaEstudiantes();
 		Controlador controlador = new Controlador();
 
 		vistaInicial.setControlador(controlador);

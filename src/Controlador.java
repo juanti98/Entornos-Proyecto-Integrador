@@ -6,7 +6,7 @@ public class Controlador {
 
 
 	private AltaEstudiante AltaEst;
-	private MenuTutor MenuTutor;
+	private VentanaEstudiantes MenuTutor;
 	private VentanaLogin VentLogin;
 
 
@@ -20,7 +20,7 @@ public class Controlador {
 	}
 
 
-	public void setMenuTutor(MenuTutor vistaMenu) {
+	public void setMenuTutor(VentanaEstudiantes vistaMenu) {
 		this.MenuTutor = vistaMenu;
 	}
 
@@ -34,7 +34,9 @@ public class Controlador {
 		MenuTutor.setVisible(true);
 	}
 	
-
+	public void mostrarCuestionario(){
+		
+	}
 	
 	public void irAAnadir(){
 		MenuTutor.setVisible(false);	
