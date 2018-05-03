@@ -42,18 +42,7 @@ public class Controlador {
 		MenuTutor.setVisible(true);
 	}
 	
-	public void mostrarCuestionario(){
-		MenuTutor.getTxtDNI().setVisible(true);
-		MenuTutor.getTxtMat().setVisible(true);
-		MenuTutor.getTxtApellido().setVisible(true);
-		MenuTutor.getTxtNombre().setVisible(true);
-		MenuTutor.getLblNombre().setVisible(true);
-		MenuTutor.getLblApellido().setVisible(true);
-		MenuTutor.getLblDninif().setVisible(true);
-		MenuTutor.getLblNMatrcula().setVisible(true);
-		MenuTutor.getLblEstado().setVisible(true);
-		MenuTutor.getComboBox().setVisible(true);
-	}
+
 	
 	public void irAAnadir(){
 		MenuTutor.setVisible(false);	

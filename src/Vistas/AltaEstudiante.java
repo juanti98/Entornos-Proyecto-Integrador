@@ -6,12 +6,14 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.*;
+import javax.swing.table.DefaultTableModel;
 
 import Controlador.Controlador;
 
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
+import javax.swing.AbstractButton;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -29,7 +31,8 @@ public class AltaEstudiante extends JFrame {
 
 	private Controlador controlador;
 	private JButton btnVolver;
-
+	private DefaultTableModel miModelo;
+	private VentanaEstudiantes tablaEstudiante;
 
 	/**
 	 * Create the frame.
@@ -88,6 +91,17 @@ public class AltaEstudiante extends JFrame {
 		contentPane.add(comboBox);
 
 		btnAadirEstudiante = new JButton("A\u00F1adir estudiante");
+		btnAadirEstudiante.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+//				tablaEstudiante.getModel();
+//				miModelo.addRow(new Object[] {txtNombre.getText(), txtApellido.getText(), txtDni.getText(), txtNumMat.getText()});
+				
+				tablaEstudiante.getModel().addRow(new Object[] {txtNombre.getText(), txtApellido.getText(), txtDni.getText(), txtNumMat.getText()});
+				
+//				table.getModel();
+//				miModelo.addRow(new Object[] {txtNombre.getText(), txtApellido.getText(), txtTelefono.getText()});
+			}
+		});
 		btnAadirEstudiante.setBounds(187, 172, 117, 23);
 		contentPane.add(btnAadirEstudiante);
 
