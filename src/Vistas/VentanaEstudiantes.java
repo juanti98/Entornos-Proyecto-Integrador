@@ -25,11 +25,17 @@ public class VentanaEstudiantes extends JFrame {
 	private JPanel contentPane;
 	private JTable tableEstudiantes;
 	private Controlador controlador;
-	private JTextField txtDNI;
-	private JTextField txtMat;
-	private JTextField txtApellido;
-	private JTextField txtNombre;
+	public JTextField txtDNI;
+	public JTextField txtMat;
+	public JTextField txtApellido;
+	public JTextField txtNombre;
 	private JButton btnMostrarCuestionario;
+	public JLabel lblNombre;
+	public JLabel lblApellido;
+	public JLabel lblDninif;
+	public JLabel lblNMatrcula;
+	public JLabel lblEstado;
+	public JComboBox comboBox;
 
 	/**
 	 * Create the frame.
@@ -68,27 +74,27 @@ public class VentanaEstudiantes extends JFrame {
 		btnAadirEstudiante.setBounds(151, 61, 122, 23);
 		contentPane.add(btnAadirEstudiante);
 		
-		JLabel lblNombre = new JLabel("Nombre:");
+		lblNombre = new JLabel("Nombre:");
 		lblNombre.setVisible(false);
 		lblNombre.setBounds(48, 236, 65, 14);
 		contentPane.add(lblNombre);
 		
-		JLabel lblApellido = new JLabel("Apellido:");
+		lblApellido = new JLabel("Apellido:");
 		lblApellido.setVisible(false);
 		lblApellido.setBounds(48, 261, 65, 14);
 		contentPane.add(lblApellido);
 		
-		JLabel lblDninif = new JLabel("DNI/NIF:");
+		lblDninif = new JLabel("DNI/NIF:");
 		lblDninif.setVisible(false);
 		lblDninif.setBounds(48, 286, 65, 14);
 		contentPane.add(lblDninif);
 		
-		JLabel lblNMatrcula = new JLabel("N\u00B7 Matr\u00EDcula:");
+		lblNMatrcula = new JLabel("N\u00B7 Matr\u00EDcula:");
 		lblNMatrcula.setVisible(false);
 		lblNMatrcula.setBounds(48, 311, 122, 14);
 		contentPane.add(lblNMatrcula);
 		
-		JLabel lblEstado = new JLabel("Estado:");
+		lblEstado = new JLabel("Estado:");
 		lblEstado.setVisible(false);
 		lblEstado.setBounds(48, 336, 65, 14);
 		contentPane.add(lblEstado);
@@ -117,7 +123,7 @@ public class VentanaEstudiantes extends JFrame {
 		contentPane.add(txtMat);
 		txtMat.setColumns(10);
 		
-		JComboBox comboBox = new JComboBox();
+		comboBox = new JComboBox();
 		comboBox.setVisible(false);
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Pendiente", "En pr\u00E1cticas", "Finalizado"}));
 		comboBox.setBounds(151, 333, 86, 17);
@@ -126,6 +132,7 @@ public class VentanaEstudiantes extends JFrame {
 		btnMostrarCuestionario = new JButton("Mostrar Cuestionario");
 		btnMostrarCuestionario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				txtDNI.setVisible(true);
 				controlador.mostrarCuestionario();
 			}
 		});
