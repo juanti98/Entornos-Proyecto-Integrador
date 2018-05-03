@@ -12,6 +12,7 @@ import javax.swing.table.*;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
 
 public class MenuTutor extends JFrame {
 
@@ -24,7 +25,7 @@ public class MenuTutor extends JFrame {
 	 */
 	public MenuTutor() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 400);
+		setBounds(100, 100, 450, 423);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -53,26 +54,24 @@ public class MenuTutor extends JFrame {
 				controlador.irAAnadir();
 			}
 		});
-		btnAadirEstudiante.setBounds(10, 61, 122, 23);
+		btnAadirEstudiante.setBounds(151, 61, 122, 23);
 		contentPane.add(btnAadirEstudiante);
-
-		JButton btnActualizarEstado = new JButton("Actualizar estado");
-		btnActualizarEstado.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				controlador.irAActualizar();
-			}
-		});
-		btnActualizarEstado.setBounds(165, 61, 115, 23);
-		contentPane.add(btnActualizarEstado);
-
-		JButton btnBorrarEstudiante = new JButton("Borrar estudiante");
-		btnBorrarEstudiante.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				controlador.irABorrar();
-			}
-		});
-		btnBorrarEstudiante.setBounds(305, 61, 119, 23);
-		contentPane.add(btnBorrarEstudiante);
+		
+		JLabel lblNombre = new JLabel("Nombre:");
+		lblNombre.setBounds(48, 236, 65, 14);
+		contentPane.add(lblNombre);
+		
+		JLabel lblApellido = new JLabel("Apellido:");
+		lblApellido.setBounds(48, 261, 65, 14);
+		contentPane.add(lblApellido);
+		
+		JLabel lblDninif = new JLabel("DNI/NIF:");
+		lblDninif.setBounds(48, 286, 65, 14);
+		contentPane.add(lblDninif);
+		
+		JLabel lblNMatrcula = new JLabel("N\u00B7 Matr\u00EDcula:");
+		lblNMatrcula.setBounds(48, 311, 122, 14);
+		contentPane.add(lblNMatrcula);
 	}
 
 	public void setControlador(Controlador controlador) {
