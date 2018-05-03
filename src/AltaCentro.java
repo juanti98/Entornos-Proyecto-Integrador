@@ -99,8 +99,8 @@ public class AltaCentro {
 		textField_3.setBounds(198, 27, 86, 20);
 		panel_1.add(textField_3);
 		
-		JButton btnAltaCiclo = new JButton("Alta centro");
-		btnAltaCiclo.setBounds(128, 214, 136, 23);
+		JButton btnAltaCiclo = new JButton("Volver");
+		btnAltaCiclo.setBounds(75, 214, 136, 23);
 		panel_1.add(btnAltaCiclo);
 		
 		JLabel lblDireccion = new JLabel("Direccion: ");
@@ -120,5 +120,9 @@ public class AltaCentro {
 		textField_5.setColumns(10);
 		textField_5.setBounds(198, 164, 86, 20);
 		panel_1.add(textField_5);
+		
+		JButton button = new JButton("Alta centro");
+		button.setBounds(221, 214, 136, 23);
+		panel_1.add(button);
 	}
 }
