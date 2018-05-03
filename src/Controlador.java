@@ -1,4 +1,3 @@
-
 public class Controlador {
 	
 	public Controlador() {
@@ -31,11 +30,10 @@ public class Controlador {
 		this.MenuTutor = vistaMenu;
 	}
 
-	public void loginMenuATutor() {
+	public void log() {
 		VentLogin.dispose();
 		MenuTutor menu = new MenuTutor();
 		menu.setVisible(true);
-		System.out.println("Hola Mundo");
+		
 	}
-
 }
