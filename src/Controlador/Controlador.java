@@ -4,7 +4,9 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import Vistas.AltaEstudiante;
+import Vistas.MenuDirector;
 import Vistas.MenuTutor;
+import Vistas.VentanaCentros;
 import Vistas.VentanaEstudiantes;
 import Vistas.VentanaLogin;
 import Vistas.VisualizarEmpresas;
@@ -20,6 +22,8 @@ public class Controlador {
 	private VentanaLogin VentLogin;
 	private Vistas.MenuTutor menuTutor;
 	private VisualizarEmpresas VerEmpresas;
+	private VentanaCentros VentCentros;
+	private MenuDirector MenDirector;
 
 	public void setVentanaLogin(VentanaLogin vistaInicial) {
 		this.VentLogin = vistaInicial;
@@ -73,6 +77,32 @@ public class Controlador {
 
 	public void setVerEmpresas(VisualizarEmpresas verEmpresas2) {
 		this.VerEmpresas = verEmpresas2;
+
+	}
+
+	public void setVentCentros(VentanaCentros ventCentros2) {
+		this.VentCentros = ventCentros2;
+
+	}
+
+	public void LoginAMenuDirector() {
+		VentLogin.setVisible(false);
+		MenDirector.setVisible(true);
+	}
+
+	public void MenuAVentanaCentros() {
+		MenDirector.setVisible(false);
+		VentCentros.setVisible(true);
+	}
+
+	public void setMenuDirector(MenuDirector menDirector2) {
+		this.MenDirector = menDirector2;
+
+	}
+
+	public void botonVolverMenuDirector() {
+		VentCentros.setVisible(false);
+		MenDirector.setVisible(true);
 
 	}
 

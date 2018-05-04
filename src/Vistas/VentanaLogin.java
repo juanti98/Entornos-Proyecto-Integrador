@@ -89,6 +89,11 @@ public class VentanaLogin extends JFrame {
 		contentPane.add(btnSimulacionTutor);
 
 		btnSimulacionDirector = new JButton("Simulacion Director");
+		btnSimulacionDirector.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.LoginAMenuDirector();
+			}
+		});
 		btnSimulacionDirector.setBounds(281, 163, 123, 23);
 		contentPane.add(btnSimulacionDirector);
 	}
