@@ -20,6 +20,7 @@ public class AltaGrupo extends JFrame{
 	private JTextField txtAnoAcademico;
 	private JTextField txtCodGrupo;
 	private JButton btnAnadirGrupo;
+
 	private Controlador controlador;
 
 
@@ -63,14 +64,14 @@ public class AltaGrupo extends JFrame{
 		btnVolver.setBounds(110, 172, 86, 23);
 		contentPane.add(btnVolver);
 	}
-
-
-
-
 	public void setControlador(Controlador controlador) {
 		this.controlador=controlador;
-		
 	}
+
+
+
+
+	
 
 
 }

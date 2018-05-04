@@ -50,6 +50,7 @@ public class VentanaEstudiantes extends JFrame {
 	private JComboBox comboBox;
 	private DefaultTableModel miModelo;
 	private JButton btnVolver;
+	private JButton button;
 
 	/**
 	 * Create the frame.
@@ -113,7 +114,7 @@ public class VentanaEstudiantes extends JFrame {
 				controlador.irAAnadir();
 			}
 		});
-		btnAadirEstudiante.setBounds(209, 313, 122, 23);
+		btnAadirEstudiante.setBounds(170, 313, 122, 23);
 		contentPane.add(btnAadirEstudiante);
 
 		setLblNombre(new JLabel("Nombre:"));
@@ -197,8 +198,13 @@ public class VentanaEstudiantes extends JFrame {
 				controlador.botonVolverMenu();
 			}
 		});
-		btnVolver.setBounds(79, 313, 89, 23);
+		btnVolver.setBounds(50, 313, 89, 23);
 		contentPane.add(btnVolver);
+		{
+			button = new JButton("Eliminar");
+			button.setBounds(321, 313, 89, 23);
+			contentPane.add(button);
+		}
 	}
 
 	public void setControlador(Controlador controlador) {

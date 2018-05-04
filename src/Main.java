@@ -31,7 +31,10 @@ public class Main {
 		VentanaCentros VentCentros=new VentanaCentros();
 		AltaCentro AltCentro=new AltaCentro();
 		VentanaGrupos VentGrupos = new VentanaGrupos();
+
 		AltaGrupo AltGrupo=new AltaGrupo();
+
+		AltaGrupo altGrupo = new AltaGrupo();
 
 		vistaInicial.setControlador(controlador);
 		vistaAltaEstu.setControlador(controlador);
@@ -43,6 +46,9 @@ public class Main {
 		AltCentro.setControlador(controlador);
 		VentGrupos.setControlador(controlador);
 		AltGrupo.setControlador(controlador);
+
+		altGrupo.setControlador(controlador);
+
 
 		controlador.setVentanaLogin(vistaInicial);
 		controlador.setAltaEstudiante(vistaAltaEstu);

@@ -185,6 +185,10 @@ public class VentanaCentros extends JFrame {
 		textField_3.setBounds(181, 373, 86, 20);
 		contentPane.add(textField_3);
 		textField_3.setColumns(10);
+		
+		JButton btnEliminar = new JButton("Eliminar");
+		btnEliminar.setBounds(655, 413, 89, 23);
+		contentPane.add(btnEliminar);
 	}
 
 	public void setControlador(Controlador controlador) {
