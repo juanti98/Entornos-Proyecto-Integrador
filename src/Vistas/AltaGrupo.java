@@ -12,12 +12,16 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import Controlador.Controlador;
+
 public class AltaGrupo extends JFrame{
 	
 	private JPanel contentPane;
 	private JTextField txtAnoAcademico;
 	private JTextField txtCodGrupo;
 	private JButton btnAnadirGrupo;
+	
+	private Controlador controlador;
 
 
 
@@ -59,6 +63,9 @@ public class AltaGrupo extends JFrame{
 		JButton btnVolver = new JButton("Volver");
 		btnVolver.setBounds(110, 172, 86, 23);
 		contentPane.add(btnVolver);
+	}
+	public void setControlador(Controlador controlador) {
+		this.controlador=controlador;
 	}
 
 

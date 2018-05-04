@@ -5,6 +5,7 @@ import javax.swing.JTextField;
 
 import Vistas.AltaCentro;
 import Vistas.AltaEstudiante;
+import Vistas.AltaGrupo;
 import Vistas.MenuDirector;
 import Vistas.MenuTutor;
 import Vistas.VentanaCentros;
@@ -28,6 +29,7 @@ public class Controlador {
 	private MenuDirector MenDirector;
 	private AltaCentro AltCentro;
 	private VentanaGrupos VenGrupos;
+	private AltaGrupo altGrupos;
 
 	public void setVentanaLogin(VentanaLogin vistaInicial) {
 		this.VentLogin = vistaInicial;
@@ -124,6 +126,12 @@ public class Controlador {
 	public void AltaCentroAVentanaCentro() {
 		AltCentro.setVisible(false);
 		VentCentros.setVisible(true);
+		
+	}
+	
+	public void VentanaGruposAAltaGrupo(){
+		VenGrupos.setVisible(false);
+		altGrupos.setVisible(true);
 		
 	}
 	

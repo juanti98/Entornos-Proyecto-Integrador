@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import Controlador.Controlador;
 import Vistas.AltaCentro;
 import Vistas.AltaEstudiante;
+import Vistas.AltaGrupo;
 import Vistas.MenuDirector;
 import Vistas.MenuTutor;
 import Vistas.VentanaCentros;
@@ -30,6 +31,7 @@ public class Main {
 		VentanaCentros VentCentros=new VentanaCentros();
 		AltaCentro AltCentro=new AltaCentro();
 		VentanaGrupos VentGrupos = new VentanaGrupos();
+		AltaGrupo altGrupo = new AltaGrupo();
 
 		vistaInicial.setControlador(controlador);
 		vistaAltaEstu.setControlador(controlador);
@@ -40,6 +42,7 @@ public class Main {
 		MenDirector.setControlador(controlador);
 		AltCentro.setControlador(controlador);
 		VentGrupos.setControlador(controlador);
+		altGrupo.setControlador(controlador);
 
 		controlador.setVentanaLogin(vistaInicial);
 		controlador.setAltaEstudiante(vistaAltaEstu);

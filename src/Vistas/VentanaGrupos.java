@@ -27,6 +27,10 @@ public class VentanaGrupos extends JFrame {
 	private JLabel lblAñoAcademicoVentanaGrupo;
 	private JPanel contentPane;
 	private Controlador controlador;
+	private JButton btnAltaGrupo;
+	private JButton button;
+	private JButton btnModificar;
+	private JButton button_1;
 
 	/**
 	 * Create the frame.
@@ -41,7 +45,7 @@ public class VentanaGrupos extends JFrame {
 		contentPane.setLayout(null);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 11, 764, 192);
+		scrollPane.setBounds(10, 11, 552, 192);
 		getContentPane().add(scrollPane);
 
 		table = new JTable();
@@ -65,22 +69,22 @@ public class VentanaGrupos extends JFrame {
 		txtCodigoGrupoVentanaGrupo.setHorizontalAlignment(SwingConstants.LEFT);
 		txtCodigoGrupoVentanaGrupo.setColumns(10);
 
-		JButton button = new JButton("Volver");
+		button = new JButton("Volver");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				controlador.botonVolverMenuDirectorDesdeGrupos();
 			}
 		});
-		button.setBounds(168, 316, 136, 23);
+		button.setBounds(34, 317, 136, 23);
 		getContentPane().add(button);
 
-		JButton btnAltaGrupo = new JButton("Alta grupo");
+		btnAltaGrupo = new JButton("Alta grupo");
 		btnAltaGrupo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				controlador.botonVolverMenuDirectorDesdeGrupos();
+				controlador.VentanaGruposAAltaGrupo();
 			}
 		});
-		btnAltaGrupo.setBounds(357, 317, 136, 23);
+		btnAltaGrupo.setBounds(296, 317, 136, 23);
 		getContentPane().add(btnAltaGrupo);
 
 		lblAñoAcademicoVentanaGrupo = new JLabel("A\u00F1o acad\u00E9mico:");
@@ -91,6 +95,14 @@ public class VentanaGrupos extends JFrame {
 		txtAñoAcademicoVentanaGrupo.setBounds(446, 217, 92, 20);
 		getContentPane().add(txtAñoAcademicoVentanaGrupo);
 		txtAñoAcademicoVentanaGrupo.setColumns(10);
+		
+		btnModificar = new JButton("Modificar");
+		btnModificar.setBounds(184, 317, 89, 23);
+		contentPane.add(btnModificar);
+		
+		button_1 = new JButton("Eliminar");
+		button_1.setBounds(449, 317, 89, 23);
+		contentPane.add(button_1);
 	}
 
 	public void setControlador(Controlador controlador) {
