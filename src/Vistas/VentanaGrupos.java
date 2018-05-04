@@ -77,7 +77,7 @@ public class VentanaGrupos extends JFrame {
 		JButton btnAltaGrupo = new JButton("Alta grupo");
 		btnAltaGrupo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				controlador.botonVolverMenuDirectorDesdeGrupos();
+				controlador.VentanaGrupoAAltaGrupo();
 			}
 		});
 		btnAltaGrupo.setBounds(357, 317, 136, 23);

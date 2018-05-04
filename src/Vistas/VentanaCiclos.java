@@ -27,6 +27,7 @@ public class VentanaCiclos extends JFrame {
 	private JTextField txtNombreCiclo;
 	private JTextField txtFamiliaProfesional;
 	private JTextField txtNombreFamiliaProfesional;
+	private JButton btnVolver;
 
 	/**
 	 * Launch the application.
@@ -106,7 +107,7 @@ public class VentanaCiclos extends JFrame {
 		txtNombreFamiliaProfesional.setBounds(406, 204, 86, 20);
 		contentPane.add(txtNombreFamiliaProfesional);
 		
-		JButton btnVolver = new JButton("Volver");
+		btnVolver = new JButton("Volver");
 		btnVolver.setBounds(10, 246, 107, 23);
 		contentPane.add(btnVolver);
 		
