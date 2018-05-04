@@ -3,6 +3,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 
 import Controlador.Controlador;
+import Vistas.AltaCentro;
 import Vistas.AltaEstudiante;
 import Vistas.MenuDirector;
 import Vistas.MenuTutor;
@@ -24,8 +25,10 @@ public class Main {
 		Controlador controlador = new Controlador();
 		MenuTutor MenuTutor=new MenuTutor();
 		VisualizarEmpresas VerEmpresas=new VisualizarEmpresas();
-		VentanaCentros VentCentros=new VentanaCentros();
 		MenuDirector MenDirector=new MenuDirector();
+		VentanaCentros VentCentros=new VentanaCentros();
+		AltaCentro AltCentro=new AltaCentro();
+		
 
 		vistaInicial.setControlador(controlador);
 		vistaAltaEstu.setControlador(controlador);
@@ -34,6 +37,8 @@ public class Main {
 		VerEmpresas.setControlador(controlador);
 		VentCentros.setControlador(controlador);
 		MenDirector.setControlador(controlador);
+		AltCentro.setControlador(controlador);
+	
 
 		controlador.setVentanaLogin(vistaInicial);
 		controlador.setAltaEstudiante(vistaAltaEstu);
@@ -42,6 +47,7 @@ public class Main {
 		controlador.setVerEmpresas(VerEmpresas);
 		controlador.setVentCentros(VentCentros);
 		controlador.setMenuDirector(MenDirector);
+		controlador.setAltCentro(AltCentro);
 		
 		vistaInicial.setVisible(true);
 	}

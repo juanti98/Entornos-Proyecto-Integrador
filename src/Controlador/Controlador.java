@@ -3,6 +3,7 @@ package Controlador;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import Vistas.AltaCentro;
 import Vistas.AltaEstudiante;
 import Vistas.MenuDirector;
 import Vistas.MenuTutor;
@@ -24,6 +25,7 @@ public class Controlador {
 	private VisualizarEmpresas VerEmpresas;
 	private VentanaCentros VentCentros;
 	private MenuDirector MenDirector;
+	private AltaCentro AltCentro;
 
 	public void setVentanaLogin(VentanaLogin vistaInicial) {
 		this.VentLogin = vistaInicial;
@@ -104,6 +106,23 @@ public class Controlador {
 		VentCentros.setVisible(false);
 		MenDirector.setVisible(true);
 
+	}
+
+	public void setAltCentro(AltaCentro altCentro2) {
+		this.AltCentro = altCentro2;
+
+	}
+
+	public void VentanaCentroAAltaCentro() {
+		VentCentros.setVisible(false);
+		AltCentro.setVisible(true);
+
+	}
+
+	public void AltaCentroAVentanaCentro() {
+		AltCentro.setVisible(false);
+		VentCentros.setVisible(true);
+		
 	}
 
 }
