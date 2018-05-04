@@ -45,6 +45,11 @@ public class MenuDirector extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		btnNewButton_1 = new JButton("Grupos\r\n");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.MenuAVentanaGrupos();
+			}
+		});
 		btnNewButton_1.setBounds(113, 78, 194, 42);
 		contentPane.add(btnNewButton_1);
 		

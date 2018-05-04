@@ -9,6 +9,7 @@ import Vistas.MenuDirector;
 import Vistas.MenuTutor;
 import Vistas.VentanaCentros;
 import Vistas.VentanaEstudiantes;
+import Vistas.VentanaGrupos;
 import Vistas.VentanaLogin;
 import Vistas.VisualizarEmpresas;
 
@@ -26,6 +27,7 @@ public class Controlador {
 	private VentanaCentros VentCentros;
 	private MenuDirector MenDirector;
 	private AltaCentro AltCentro;
+	private VentanaGrupos VenGrupos;
 
 	public void setVentanaLogin(VentanaLogin vistaInicial) {
 		this.VentLogin = vistaInicial;
@@ -123,6 +125,23 @@ public class Controlador {
 		AltCentro.setVisible(false);
 		VentCentros.setVisible(true);
 		
+	}
+	
+	public void MenuAVentanaGrupos(){
+		MenDirector.setVisible(false);
+		VenGrupos.setVisible(true);
+		
+	}
+
+	public void setVentGrupos(VentanaGrupos ventGrupos) {
+		// TODO Auto-generated method stub
+		this.VenGrupos = ventGrupos;
+	}
+
+	public void botonVolverMenuDirectorDesdeGrupos() {
+		// TODO Auto-generated method stub
+		VenGrupos.setVisible(false);
+		MenDirector.setVisible(true);
 	}
 
 }

@@ -9,6 +9,7 @@ import Vistas.MenuDirector;
 import Vistas.MenuTutor;
 import Vistas.VentanaCentros;
 import Vistas.VentanaEstudiantes;
+import Vistas.VentanaGrupos;
 import Vistas.VentanaLogin;
 import Vistas.VisualizarEmpresas;
 
@@ -28,7 +29,7 @@ public class Main {
 		MenuDirector MenDirector=new MenuDirector();
 		VentanaCentros VentCentros=new VentanaCentros();
 		AltaCentro AltCentro=new AltaCentro();
-		
+		VentanaGrupos VentGrupos = new VentanaGrupos();
 
 		vistaInicial.setControlador(controlador);
 		vistaAltaEstu.setControlador(controlador);
@@ -38,7 +39,7 @@ public class Main {
 		VentCentros.setControlador(controlador);
 		MenDirector.setControlador(controlador);
 		AltCentro.setControlador(controlador);
-	
+		VentGrupos.setControlador(controlador);
 
 		controlador.setVentanaLogin(vistaInicial);
 		controlador.setAltaEstudiante(vistaAltaEstu);
@@ -48,6 +49,7 @@ public class Main {
 		controlador.setVentCentros(VentCentros);
 		controlador.setMenuDirector(MenDirector);
 		controlador.setAltCentro(AltCentro);
+		controlador.setVentGrupos(VentGrupos);
 		
 		vistaInicial.setVisible(true);
 	}
