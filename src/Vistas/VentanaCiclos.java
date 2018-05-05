@@ -11,9 +11,14 @@ import javax.swing.JTable;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.table.DefaultTableModel;
+
+import Controlador.Controlador;
+
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VentanaCiclos extends JFrame {
 
@@ -28,26 +33,10 @@ public class VentanaCiclos extends JFrame {
 	private JTextField txtFamiliaProfesional;
 	private JTextField txtNombreFamiliaProfesional;
 	private JButton btnVolver;
+	private Controlador controlador;
+	private JButton btnAñadir;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaCiclos frame = new VentanaCiclos();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
+	
 	public VentanaCiclos() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 564, 323);
@@ -108,19 +97,34 @@ public class VentanaCiclos extends JFrame {
 		contentPane.add(txtNombreFamiliaProfesional);
 		
 		btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.botonVolverMenuDirector();
+			}
+		});
 		btnVolver.setBounds(10, 246, 107, 23);
 		contentPane.add(btnVolver);
 		
-		JButton btnAñadir = new JButton("A\u00F1adir");
-		btnAñadir.setBounds(127, 246, 136, 23);
+		btnAñadir = new JButton("Dar de Alta");
+		btnAñadir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.VentanaCiclosAAltaCiclos();
+			}
+		});
+		btnAñadir.setBounds(269, 246, 136, 23);
 		contentPane.add(btnAñadir);
 		
 		JButton btnModificar = new JButton("Modificar");
-		btnModificar.setBounds(273, 246, 136, 23);
+		btnModificar.setBounds(127, 246, 136, 23);
 		contentPane.add(btnModificar);
 		
 		JButton btnEliminar = new JButton("Eliminar");
 		btnEliminar.setBounds(416, 246, 122, 23);
 		contentPane.add(btnEliminar);
+	}
+
+	public void setControlador(Controlador controlador) {
+		this.controlador=controlador;
+		
 	}
 }

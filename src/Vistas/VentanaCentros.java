@@ -44,6 +44,7 @@ public class VentanaCentros extends JFrame {
 	private JTextField textField_2;
 	private JLabel lblCodigoPostal;
 	private JTextField textField_3;
+	private JButton btnA;
 
 	/**
 	 * Create the frame.
@@ -106,17 +107,17 @@ public class VentanaCentros extends JFrame {
 				controlador.botonVolverMenuDirector();
 			}
 		});
-		button.setBounds(161, 413, 136, 23);
+		button.setBounds(123, 413, 136, 23);
 		getContentPane().add(button);
 
-		JButton button_1 = new JButton("Alta centro");
-		button_1.addActionListener(new ActionListener() {
+		btnA = new JButton("Dar de Alta");
+		btnA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				controlador.VentanaCentroAAltaCentro();
 			}
 		});
-		button_1.setBounds(490, 413, 136, 23);
-		getContentPane().add(button_1);
+		btnA.setBounds(452, 413, 136, 23);
+		getContentPane().add(btnA);
 
 		lblDenominacionCentroVentanaCentro = new JLabel("Denominacion centro: ");
 		lblDenominacionCentroVentanaCentro.setBounds(438, 220, 139, 14);
@@ -146,7 +147,7 @@ public class VentanaCentros extends JFrame {
 		txtNombreRepresentanteVentanaCentro.setColumns(10);
 		
 		btnModificar = new JButton("Modificar");
-		btnModificar.setBounds(327, 413, 136, 23);
+		btnModificar.setBounds(289, 413, 136, 23);
 		contentPane.add(btnModificar);
 		
 		lblDirectorcentro = new JLabel("Director Centro:");
@@ -187,7 +188,7 @@ public class VentanaCentros extends JFrame {
 		textField_3.setColumns(10);
 		
 		JButton btnEliminar = new JButton("Eliminar");
-		btnEliminar.setBounds(655, 413, 89, 23);
+		btnEliminar.setBounds(617, 413, 89, 23);
 		contentPane.add(btnEliminar);
 	}
 

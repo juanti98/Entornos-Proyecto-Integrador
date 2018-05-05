@@ -9,9 +9,14 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+
+import Controlador.Controlador;
+
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VentanaTutor extends JFrame {
 
@@ -21,6 +26,7 @@ public class VentanaTutor extends JFrame {
 	private JTextField txtApellido1;
 	private JTextField txtApellido2;
 	private JTextField txtNIF;
+	private Controlador controlador;
 
 	public VentanaTutor() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -80,20 +86,35 @@ public class VentanaTutor extends JFrame {
 		contentPane.add(txtNIF);
 		txtNIF.setColumns(10);
 		
-		JButton btnAnadir = new JButton("A\u00F1adir");
-		btnAnadir.setBounds(91, 296, 89, 23);
+		JButton btnAnadir = new JButton("Dar de Alta");
+		btnAnadir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.VentanaTutorAAltaTutor();
+			}
+		});
+		btnAnadir.setBounds(401, 296, 133, 23);
 		contentPane.add(btnAnadir);
 		
 		JButton btnModificar = new JButton("Modificar");
-		btnModificar.setBounds(242, 296, 89, 23);
+		btnModificar.setBounds(258, 296, 133, 23);
 		contentPane.add(btnModificar);
 		
 		JButton btnEliminar = new JButton("Eliminar");
-		btnEliminar.setBounds(395, 296, 89, 23);
+		btnEliminar.setBounds(544, 296, 133, 23);
 		contentPane.add(btnEliminar);
 		
 		JButton btnVovler = new JButton("Vovler");
-		btnVovler.setBounds(551, 296, 89, 23);
+		btnVovler.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.botonVolverMenuDirector();
+			}
+		});
+		btnVovler.setBounds(115, 296, 133, 23);
 		contentPane.add(btnVovler);
+	}
+
+	public void setControlador(Controlador controlador) {
+		this.controlador=controlador;
+		
 	}
 }

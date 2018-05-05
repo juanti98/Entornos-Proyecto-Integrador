@@ -4,14 +4,20 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import Vistas.AltaCentro;
+import Vistas.AltaCiclos;
+import Vistas.AltaEmpresa;
 import Vistas.AltaEstudiante;
 import Vistas.AltaGrupo;
+import Vistas.AltaTutor;
 import Vistas.MenuDirector;
 import Vistas.MenuTutor;
 import Vistas.VentanaCentros;
+import Vistas.VentanaCiclos;
+import Vistas.VentanaEmpresas;
 import Vistas.VentanaEstudiantes;
 import Vistas.VentanaGrupos;
 import Vistas.VentanaLogin;
+import Vistas.VentanaTutor;
 import Vistas.VisualizarEmpresas;
 
 public class Controlador {
@@ -29,11 +35,14 @@ public class Controlador {
 	private MenuDirector MenDirector;
 	private AltaCentro AltCentro;
 	private VentanaGrupos VenGrupos;
-
+	private VentanaCentros VenCentros;
+	private VentanaCiclos VenCiclos;
 	private AltaGrupo AltGrupo;
-
-	private AltaGrupo altGrupos;
-
+	private AltaCiclos AltCiclos;
+	private VentanaEmpresas VenEmpresas;
+	private AltaEmpresa AltEmpresas;
+	private VentanaTutor VenTutor;
+	private AltaTutor AltTutor;
 
 	public void setVentanaLogin(VentanaLogin vistaInicial) {
 		this.VentLogin = vistaInicial;
@@ -111,6 +120,9 @@ public class Controlador {
 	}
 
 	public void botonVolverMenuDirector() {
+		VenTutor.setVisible(false);
+		VenCiclos.setVisible(false);
+		VenGrupos.setVisible(false);
 		VentCentros.setVisible(false);
 		MenDirector.setVisible(true);
 
@@ -127,22 +139,22 @@ public class Controlador {
 
 	}
 
-	public void AltaCentroAVentanaCentro() {
+	public void botonVolverVentanaCentro() {
 		AltCentro.setVisible(false);
 		VentCentros.setVisible(true);
-		
+
 	}
-	
-	public void VentanaGruposAAltaGrupo(){
+
+	public void VentanaGruposAAltaGrupo() {
 		VenGrupos.setVisible(false);
-		altGrupos.setVisible(true);
-		
+		AltGrupo.setVisible(true);
+
 	}
-	
-	public void MenuAVentanaGrupos(){
+
+	public void MenuAVentanaGrupos() {
 		MenDirector.setVisible(false);
 		VenGrupos.setVisible(true);
-		
+
 	}
 
 	public void setVentGrupos(VentanaGrupos ventGrupos) {
@@ -151,7 +163,7 @@ public class Controlador {
 	}
 
 	public void botonVolverMenuDirectorDesdeGrupos() {
-		// TODO Auto-generated method stub
+		VenEmpresas.setVisible(false);
 		VenGrupos.setVisible(false);
 		MenDirector.setVisible(true);
 	}
@@ -159,11 +171,101 @@ public class Controlador {
 	public void VentanaGrupoAAltaGrupo() {
 		AltGrupo.setVisible(true);
 		VenGrupos.setVisible(false);
-		
+
 	}
 
 	public void setAltGrupo(AltaGrupo altGrupo2) {
-		this.AltGrupo=altGrupo2;
+		this.AltGrupo = altGrupo2;
+
+	}
+
+	public void botonVolverVentanaGrupo() {
+		AltGrupo.setVisible(false);
+		VenGrupos.setVisible(true);
+
+	}
+
+	public void MenuAVentanaCiclos() {
+		VenCiclos.setVisible(true);
+		MenDirector.setVisible(false);
+
+	}
+
+	public void setVenCiclos(VentanaCiclos ventCiclos) {
+		this.VenCiclos = ventCiclos;
+
+	}
+
+	public void VentanaCiclosAAltaCiclos() {
+		VenCiclos.setVisible(false);
+		AltCiclos.setVisible(true);
+
+	}
+
+	public void setAltCiclos(AltaCiclos altCiclos2) {
+		this.AltCiclos = altCiclos2;
+
+	}
+
+	public void botonVolverVentanaCiclos() {
+		AltCiclos.setVisible(false);
+		VenCiclos.setVisible(true);
+
+	}
+
+	public void MenuAVentanaEmpresas() {
+		VenEmpresas.setVisible(true);
+		MenDirector.setVisible(false);
+
+	}
+
+	public void setVenEmpresas(VentanaEmpresas ventEmpresas) {
+		this.VenEmpresas = ventEmpresas;
+
+	}
+
+	public void VentanaEmpresasAAltaEmpresas() {
+		AltEmpresas.setVisible(true);
+		VenEmpresas.setVisible(false);
+
+	}
+
+	public void setAltEmpresas(AltaEmpresa altEmpresas2) {
+		this.AltEmpresas = altEmpresas2;
+
+	}
+
+	public void AltaEmpresaAVentanaEmpresa() {
+		AltEmpresas.setVisible(false);
+		VenEmpresas.setVisible(true);
+
+	}
+
+	public void setVenTutor(VentanaTutor venTutor) {
+		this.VenTutor = venTutor;
+
+	}
+
+	public void MenuAVentanaTutor() {
+		MenDirector.setVisible(false);
+		VenTutor.setVisible(true);
+
+	}
+
+	public void VentanaTutorAAltaTutor() {
+		VenTutor.setVisible(false);
+		AltTutor.setVisible(true);
+		
+	}
+
+	public void setAltaTutor(AltaTutor altaTutor) {
+		this.AltTutor=altaTutor;
+		
+	}
+
+	public void botonVolverVentanaTutor() {
+		this.AltTutor.setVisible(false);
+		this.VenTutor.setVisible(true);
 		
 	}
 

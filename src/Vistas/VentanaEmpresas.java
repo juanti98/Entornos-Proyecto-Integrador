@@ -37,7 +37,7 @@ public class VentanaEmpresas extends JFrame {
 	 */
 	public VentanaEmpresas() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 605, 391);
+		setBounds(100, 100, 839, 391);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -45,7 +45,7 @@ public class VentanaEmpresas extends JFrame {
 		contentPane.setLayout(null);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 11, 562, 192);
+		scrollPane.setBounds(10, 11, 803, 192);
 		getContentPane().add(scrollPane);
 
 		table = new JTable();
@@ -64,11 +64,11 @@ public class VentanaEmpresas extends JFrame {
 		scrollPane.setViewportView(table);
 
 		lblNumConvenio = new JLabel("N\u00FAmero de convenio:");
-		lblNumConvenio.setBounds(38, 220, 108, 14);
+		lblNumConvenio.setBounds(170, 221, 108, 14);
 		getContentPane().add(lblNumConvenio);
 
 		txtNumConvenio = new JTextField();
-		txtNumConvenio.setBounds(159, 217, 86, 20);
+		txtNumConvenio.setBounds(291, 218, 86, 20);
 		getContentPane().add(txtNumConvenio);
 		txtNumConvenio.setHorizontalAlignment(SwingConstants.LEFT);
 		txtNumConvenio.setColumns(10);
@@ -79,63 +79,68 @@ public class VentanaEmpresas extends JFrame {
 				controlador.botonVolverMenuDirectorDesdeGrupos();
 			}
 		});
-		btnVolver.setBounds(10, 317, 117, 23);
+		btnVolver.setBounds(142, 318, 117, 23);
 		getContentPane().add(btnVolver);
 
 		lblDireccion = new JLabel("Direcci\u00F3n:");
-		lblDireccion.setBounds(357, 220, 139, 14);
+		lblDireccion.setBounds(489, 221, 139, 14);
 		getContentPane().add(lblDireccion);
 
 		txtDireccion = new JTextField();
-		txtDireccion.setBounds(446, 217, 92, 20);
+		txtDireccion.setBounds(578, 218, 92, 20);
 		getContentPane().add(txtDireccion);
 		txtDireccion.setColumns(10);
 		
 		JLabel lblNomEmpresa = new JLabel("Nombre empresa:");
-		lblNomEmpresa.setBounds(38, 246, 92, 14);
+		lblNomEmpresa.setBounds(170, 247, 92, 14);
 		contentPane.add(lblNomEmpresa);
 		
 		txtNomEmpresa = new JTextField();
-		txtNomEmpresa.setBounds(159, 243, 86, 20);
+		txtNomEmpresa.setBounds(291, 244, 86, 20);
 		contentPane.add(txtNomEmpresa);
 		txtNomEmpresa.setColumns(10);
 		
-		JButton btnAnadir = new JButton("A\u00F1adir");
-		btnAnadir.setBounds(137, 317, 136, 23);
+		JButton btnAnadir = new JButton("Dar de Alta");
+		btnAnadir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.VentanaEmpresasAAltaEmpresas();
+			}
+		});
+		btnAnadir.setBounds(412, 318, 136, 23);
 		contentPane.add(btnAnadir);
 		
 		JButton btnModificar = new JButton("Modificar");
-		btnModificar.setBounds(283, 317, 136, 23);
+		btnModificar.setBounds(269, 318, 136, 23);
 		contentPane.add(btnModificar);
 		
 		JButton btnEliminar = new JButton("Eliminar");
-		btnEliminar.setBounds(426, 317, 136, 23);
+		btnEliminar.setBounds(558, 318, 136, 23);
 		contentPane.add(btnEliminar);
 		
 		JLabel lblFechaFirma = new JLabel("Fecha firma:");
-		lblFechaFirma.setBounds(38, 277, 67, 14);
+		lblFechaFirma.setBounds(170, 278, 67, 14);
 		contentPane.add(lblFechaFirma);
 		
 		txtFechaFirma = new JTextField();
-		txtFechaFirma.setBounds(159, 274, 86, 20);
+		txtFechaFirma.setBounds(291, 275, 86, 20);
 		contentPane.add(txtFechaFirma);
 		txtFechaFirma.setColumns(10);
 		
 		JLabel lblTutorEmpresa = new JLabel("Tutor empresa:");
-		lblTutorEmpresa.setBounds(357, 249, 86, 14);
+		lblTutorEmpresa.setBounds(489, 250, 86, 14);
 		contentPane.add(lblTutorEmpresa);
 		
 		txtTutorEmpresa = new JTextField();
-		txtTutorEmpresa.setBounds(446, 245, 92, 20);
+		txtTutorEmpresa.setBounds(578, 246, 92, 20);
 		contentPane.add(txtTutorEmpresa);
 		txtTutorEmpresa.setColumns(10);
 		
 		JLabel lblRepEmpresa = new JLabel("Representante empresa:");
-		lblRepEmpresa.setBounds(316, 277, 127, 14);
+		lblRepEmpresa.setBounds(448, 278, 127, 14);
 		contentPane.add(lblRepEmpresa);
 		
 		txtRepEmpresa = new JTextField();
-		txtRepEmpresa.setBounds(446, 274, 92, 20);
+		txtRepEmpresa.setBounds(578, 275, 92, 20);
 		contentPane.add(txtRepEmpresa);
 		txtRepEmpresa.setColumns(10);
 	}

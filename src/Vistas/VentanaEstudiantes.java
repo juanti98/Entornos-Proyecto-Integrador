@@ -108,7 +108,7 @@ public class VentanaEstudiantes extends JFrame {
 		tableEstudiantes.getColumnModel().getColumn(3).setPreferredWidth(111);
 		scrollPane.setViewportView(tableEstudiantes);
 
-		JButton btnAadirEstudiante = new JButton("A\u00F1adir estudiante");
+		JButton btnAadirEstudiante = new JButton("Dar de Alta");
 		btnAadirEstudiante.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				controlador.irAAnadir();

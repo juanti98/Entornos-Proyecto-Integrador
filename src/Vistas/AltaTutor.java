@@ -38,49 +38,49 @@ public class AltaTutor extends JFrame {
 	 */
 	public AltaTutor() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 385, 233);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
 		JLabel lblNombre = new JLabel("Nombre:");
-		lblNombre.setBounds(25, 23, 46, 14);
+		lblNombre.setBounds(25, 23, 183, 14);
 		contentPane.add(lblNombre);
 
 		JLabel lblApellido = new JLabel("Apellido:");
-		lblApellido.setBounds(25, 48, 46, 14);
+		lblApellido.setBounds(25, 48, 183, 14);
 		contentPane.add(lblApellido);
 
 		JLabel lblDni = new JLabel("DNI/NIF:");
-		lblDni.setBounds(25, 98, 46, 14);
+		lblDni.setBounds(25, 98, 183, 14);
 		contentPane.add(lblDni);
 
 		JLabel lblApellido2 = new JLabel("Apellido 2:");
-		lblApellido2.setBounds(25, 73, 109, 14);
+		lblApellido2.setBounds(25, 73, 183, 14);
 		contentPane.add(lblApellido2);
 
 		txtNumMat = new JTextField();
-		txtNumMat.setBounds(144, 70, 86, 20);
+		txtNumMat.setBounds(218, 67, 144, 20);
 		contentPane.add(txtNumMat);
 		txtNumMat.setColumns(10);
 
 		txtDni = new JTextField();
-		txtDni.setBounds(144, 95, 86, 20);
+		txtDni.setBounds(218, 92, 144, 20);
 		contentPane.add(txtDni);
 		txtDni.setColumns(10);
 
 		txtApellido = new JTextField();
-		txtApellido.setBounds(144, 45, 86, 20);
+		txtApellido.setBounds(218, 42, 144, 20);
 		contentPane.add(txtApellido);
 		txtApellido.setColumns(10);
 
 		txtNombre = new JTextField();
-		txtNombre.setBounds(144, 20, 86, 20);
+		txtNombre.setBounds(218, 17, 144, 20);
 		contentPane.add(txtNombre);
 		txtNombre.setColumns(10);
 
-		btnAadirEstudiante = new JButton("A\u00F1adir estudiante");
+		btnAadirEstudiante = new JButton("Dar de Alta");
 		btnAadirEstudiante.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 //				tablaEstudiante.getModel();
@@ -92,16 +92,16 @@ public class AltaTutor extends JFrame {
 //				miModelo.addRow(new Object[] {txtNombre.getText(), txtApellido.getText(), txtTelefono.getText()});
 			}
 		});
-		btnAadirEstudiante.setBounds(187, 172, 117, 23);
+		btnAadirEstudiante.setBounds(188, 152, 117, 23);
 		contentPane.add(btnAadirEstudiante);
 
 		btnVolver = new JButton("Volver");
 		btnVolver.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				controlador.botonVolverVentanaEstudiante();
+				controlador.botonVolverVentanaTutor();
 				}
 		});
-		btnVolver.setBounds(76, 172, 86, 23);
+		btnVolver.setBounds(45, 152, 117, 23);
 		contentPane.add(btnVolver);
 	}
 

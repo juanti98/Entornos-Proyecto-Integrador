@@ -54,14 +54,29 @@ public class MenuDirector extends JFrame {
 		contentPane.add(btnNewButton_1);
 		
 		btnNewButton_2 = new JButton("Ciclos");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.MenuAVentanaCiclos();
+			}
+		});
 		btnNewButton_2.setBounds(113, 129, 194, 42);
 		contentPane.add(btnNewButton_2);
 		
 		btnNewButton_3 = new JButton("Empresas");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.MenuAVentanaEmpresas();
+			}
+		});
 		btnNewButton_3.setBounds(113, 182, 194, 42);
 		contentPane.add(btnNewButton_3);
 		
 		btnNewButton_4 = new JButton("Tutor");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.MenuAVentanaTutor();
+			}
+		});
 		btnNewButton_4.setBounds(113, 235, 194, 42);
 		contentPane.add(btnNewButton_4);
 	}

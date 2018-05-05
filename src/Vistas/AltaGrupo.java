@@ -55,12 +55,17 @@ public class AltaGrupo extends JFrame{
 		contentPane.add(txtCodGrupo);
 		txtCodGrupo.setColumns(10);
 
-		btnAnadirGrupo = new JButton("Añadir Grupo");
+		btnAnadirGrupo = new JButton("Dar de Alta");
 
 		btnAnadirGrupo.setBounds(223, 172, 117, 23);
 		contentPane.add(btnAnadirGrupo);
 
 		JButton btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				controlador.botonVolverVentanaGrupo();
+			}
+		});
 		btnVolver.setBounds(110, 172, 86, 23);
 		contentPane.add(btnVolver);
 	}

@@ -120,7 +120,7 @@ public class AltaCentro extends JFrame {
 		JButton btnVolver = new JButton("Volver");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				controlador.AltaCentroAVentanaCentro();
+				controlador.botonVolverVentanaCentro();
 			}
 		});
 		btnVolver.setBounds(77, 262, 89, 23);

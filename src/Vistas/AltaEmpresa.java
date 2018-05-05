@@ -1,113 +1,109 @@
 package Vistas;
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class AltaEmpresa extends JFrame{
+import Controlador.Controlador;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-	private JFrame frame;
+public class AltaEmpresa extends JFrame {
+
+	private JPanel contentPane;
+	private Controlador controlador;
+	private JTextField txtNombreConvenio;
+	private JTextField txtNombreEmpresa;
+	private JTextField txtFechaFirma;
 	private JTextField txtDireccion;
-	private JTextField txtNomEmpresa;
-	private JTextField txtNumConvenio;
 	private JTextField txtTutorEmpresa;
 	private JTextField txtRepresentanteEmpresa;
-	private JTextField txtFechaFirma;
 
-
-
-	/**
-	 * Create the application.
-	 */
+	
 	public AltaEmpresa() {
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 327);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
 		
-		JPanel panel = new JPanel();
-		panel.setLayout(null);
-		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		frame.getContentPane().add(panel, BorderLayout.CENTER);
+		JLabel lblNumeroConvenio = new JLabel("Numero de convenio:");
+		lblNumeroConvenio.setBounds(37, 22, 195, 14);
+		contentPane.add(lblNumeroConvenio);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.setLayout(null);
-		panel_1.setBorder(new EmptyBorder(5, 5, 5, 5));
-		panel_1.setBounds(0, 0, 434, 262);
-		panel.add(panel_1);
+		JLabel lblNombreEmpresa = new JLabel("Nombre de la empresa:");
+		lblNombreEmpresa.setBounds(37, 58, 195, 14);
+		contentPane.add(lblNombreEmpresa);
 		
-		JLabel lblCodigoCentro = new JLabel("N\u00FAmero de convenio:");
-		lblCodigoCentro.setBounds(79, 33, 109, 14);
-		panel_1.add(lblCodigoCentro);
+		JLabel lblFechaFirma = new JLabel("Fecha de la firma:");
+		lblFechaFirma.setBounds(37, 94, 195, 14);
+		contentPane.add(lblFechaFirma);
 		
-		JLabel lblNifCentro = new JLabel("Nombre empresa:");
-		lblNifCentro.setBounds(79, 58, 109, 14);
-		panel_1.add(lblNifCentro);
+		JLabel lblDireccion = new JLabel("Direccion:");
+		lblDireccion.setBounds(37, 130, 195, 14);
+		contentPane.add(lblDireccion);
 		
-		JLabel lblNif = new JLabel("Fecha firma:");
-		lblNif.setBounds(79, 83, 66, 14);
-		panel_1.add(lblNif);
+		JLabel lblTutorEmpresa = new JLabel("Tutor de la empresa:");
+		lblTutorEmpresa.setBounds(37, 166, 195, 14);
+		contentPane.add(lblTutorEmpresa);
 		
-		JLabel lblNombreRepresentante = new JLabel("Representante empresa:");
-		lblNombreRepresentante.setBounds(79, 167, 132, 14);
-		panel_1.add(lblNombreRepresentante);
+		JLabel lblRepresentanteEmpresa = new JLabel("Representante de la empresa:");
+		lblRepresentanteEmpresa.setBounds(37, 202, 195, 14);
+		contentPane.add(lblRepresentanteEmpresa);
 		
-		txtDireccion = new JTextField();
-		txtDireccion.setColumns(10);
-		txtDireccion.setBounds(214, 105, 86, 20);
-		panel_1.add(txtDireccion);
+		txtNombreConvenio = new JTextField();
+		txtNombreConvenio.setBounds(242, 19, 166, 20);
+		contentPane.add(txtNombreConvenio);
+		txtNombreConvenio.setColumns(10);
 		
-		txtNomEmpresa = new JTextField();
-		txtNomEmpresa.setColumns(10);
-		txtNomEmpresa.setBounds(214, 55, 86, 20);
-		panel_1.add(txtNomEmpresa);
-		
-		txtNumConvenio = new JTextField();
-		txtNumConvenio.setColumns(10);
-		txtNumConvenio.setBounds(214, 30, 86, 20);
-		panel_1.add(txtNumConvenio);
-		
-		JButton btnAltaCiclo = new JButton("Volver");
-		btnAltaCiclo.setBounds(75, 214, 136, 23);
-		panel_1.add(btnAltaCiclo);
-		
-		JLabel lblDireccion = new JLabel("Tutor empresa:");
-		lblDireccion.setBounds(79, 139, 119, 14);
-		panel_1.add(lblDireccion);
-		
-		txtTutorEmpresa = new JTextField();
-		txtTutorEmpresa.setColumns(10);
-		txtTutorEmpresa.setBounds(214, 136, 86, 20);
-		panel_1.add(txtTutorEmpresa);
-		
-		JLabel lblDat = new JLabel("Direcci\u00F3n:");
-		lblDat.setBounds(79, 111, 66, 14);
-		panel_1.add(lblDat);
-		
-		txtRepresentanteEmpresa = new JTextField();
-		txtRepresentanteEmpresa.setColumns(10);
-		txtRepresentanteEmpresa.setBounds(214, 164, 86, 20);
-		panel_1.add(txtRepresentanteEmpresa);
-		
-		JButton btnAltaEmpresa = new JButton("Alta empresa");
-		btnAltaEmpresa.setBounds(221, 214, 136, 23);
-		panel_1.add(btnAltaEmpresa);
+		txtNombreEmpresa = new JTextField();
+		txtNombreEmpresa.setBounds(242, 55, 166, 20);
+		contentPane.add(txtNombreEmpresa);
+		txtNombreEmpresa.setColumns(10);
 		
 		txtFechaFirma = new JTextField();
-		txtFechaFirma.setBounds(214, 80, 86, 20);
-		panel_1.add(txtFechaFirma);
+		txtFechaFirma.setBounds(242, 91, 166, 20);
+		contentPane.add(txtFechaFirma);
 		txtFechaFirma.setColumns(10);
+		
+		txtDireccion = new JTextField();
+		txtDireccion.setBounds(242, 127, 166, 20);
+		contentPane.add(txtDireccion);
+		txtDireccion.setColumns(10);
+		
+		txtTutorEmpresa = new JTextField();
+		txtTutorEmpresa.setBounds(242, 163, 166, 20);
+		contentPane.add(txtTutorEmpresa);
+		txtTutorEmpresa.setColumns(10);
+		
+		txtRepresentanteEmpresa = new JTextField();
+		txtRepresentanteEmpresa.setBounds(242, 199, 166, 20);
+		contentPane.add(txtRepresentanteEmpresa);
+		txtRepresentanteEmpresa.setColumns(10);
+		
+		JButton btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.AltaEmpresaAVentanaEmpresa();
+			}
+		});
+		btnVolver.setBounds(52, 254, 124, 23);
+		contentPane.add(btnVolver);
+		
+		JButton btnDarAlta = new JButton("Dar de Alta");
+		btnDarAlta.setBounds(224, 254, 124, 23);
+		contentPane.add(btnDarAlta);
+	}
+
+	public void setControlador(Controlador controlador) {
+		this.controlador=controlador;
+		
 	}
 }

@@ -78,10 +78,10 @@ public class VentanaGrupos extends JFrame {
 		button.setBounds(34, 317, 136, 23);
 		getContentPane().add(button);
 
-		btnAltaGrupo = new JButton("Alta grupo");
+		btnAltaGrupo = new JButton("Dar de Alta");
 		btnAltaGrupo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				controlador.VentanaGrupoAAltaGrupo();
 			}
 		});
 		btnAltaGrupo.setBounds(296, 317, 136, 23);

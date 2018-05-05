@@ -4,14 +4,20 @@ import javax.swing.JFrame;
 
 import Controlador.Controlador;
 import Vistas.AltaCentro;
+import Vistas.AltaCiclos;
+import Vistas.AltaEmpresa;
 import Vistas.AltaEstudiante;
 import Vistas.AltaGrupo;
+import Vistas.AltaTutor;
 import Vistas.MenuDirector;
 import Vistas.MenuTutor;
 import Vistas.VentanaCentros;
+import Vistas.VentanaCiclos;
+import Vistas.VentanaEmpresas;
 import Vistas.VentanaEstudiantes;
 import Vistas.VentanaGrupos;
 import Vistas.VentanaLogin;
+import Vistas.VentanaTutor;
 import Vistas.VisualizarEmpresas;
 
 public class Main {
@@ -31,10 +37,15 @@ public class Main {
 		VentanaCentros VentCentros=new VentanaCentros();
 		AltaCentro AltCentro=new AltaCentro();
 		VentanaGrupos VentGrupos = new VentanaGrupos();
-
+		VentanaCiclos VentCiclos=new VentanaCiclos();
 		AltaGrupo AltGrupo=new AltaGrupo();
+		AltaCiclos AltCiclos=new AltaCiclos();
+		VentanaEmpresas VentEmpresas=new VentanaEmpresas();
+		AltaEmpresa AltEmpresas=new AltaEmpresa();
+		VentanaTutor VenTutor=new VentanaTutor();
+		AltaTutor AltaTutor=new AltaTutor();
 
-		AltaGrupo altGrupo = new AltaGrupo();
+	
 
 		vistaInicial.setControlador(controlador);
 		vistaAltaEstu.setControlador(controlador);
@@ -46,10 +57,14 @@ public class Main {
 		AltCentro.setControlador(controlador);
 		VentGrupos.setControlador(controlador);
 		AltGrupo.setControlador(controlador);
-
-		altGrupo.setControlador(controlador);
-
-
+		VentCiclos.setControlador(controlador);
+		AltCiclos.setControlador(controlador);
+		VentEmpresas.setControlador(controlador);
+		AltEmpresas.setControlador(controlador);
+		VenTutor.setControlador(controlador);
+		AltaTutor.setControlador(controlador);
+		
+		
 		controlador.setVentanaLogin(vistaInicial);
 		controlador.setAltaEstudiante(vistaAltaEstu);
 		controlador.setVentanaEstudiante(VentanaEstudiante);
@@ -60,8 +75,15 @@ public class Main {
 		controlador.setAltCentro(AltCentro);
 		controlador.setVentGrupos(VentGrupos);
 		controlador.setAltGrupo(AltGrupo);
+		controlador.setVenCiclos(VentCiclos);
+		controlador.setAltCiclos(AltCiclos);
+		controlador.setVenEmpresas(VentEmpresas);
+		controlador.setAltEmpresas(AltEmpresas);
+		controlador.setVenTutor(VenTutor);
+		controlador.setAltaTutor(AltaTutor);
 		
 		vistaInicial.setVisible(true);
+		
 	}
 
 	public static void main(String[] args) {
