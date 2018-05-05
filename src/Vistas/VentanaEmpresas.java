@@ -106,11 +106,11 @@ public class VentanaEmpresas extends JFrame {
 				controlador.VentanaEmpresasAAltaEmpresas();
 			}
 		});
-		btnAnadir.setBounds(412, 318, 136, 23);
+		btnAnadir.setBounds(269, 318, 136, 23);
 		contentPane.add(btnAnadir);
 		
 		JButton btnModificar = new JButton("Modificar");
-		btnModificar.setBounds(269, 318, 136, 23);
+		btnModificar.setBounds(415, 318, 136, 23);
 		contentPane.add(btnModificar);
 		
 		JButton btnEliminar = new JButton("Eliminar");

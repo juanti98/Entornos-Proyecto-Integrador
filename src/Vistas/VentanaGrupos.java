@@ -75,7 +75,7 @@ public class VentanaGrupos extends JFrame {
 				controlador.botonVolverMenuDirectorDesdeGrupos();
 			}
 		});
-		button.setBounds(34, 317, 136, 23);
+		button.setBounds(36, 278, 136, 23);
 		getContentPane().add(button);
 
 		btnAltaGrupo = new JButton("Dar de Alta");
@@ -84,7 +84,7 @@ public class VentanaGrupos extends JFrame {
 				controlador.VentanaGrupoAAltaGrupo();
 			}
 		});
-		btnAltaGrupo.setBounds(296, 317, 136, 23);
+		btnAltaGrupo.setBounds(182, 278, 136, 23);
 		getContentPane().add(btnAltaGrupo);
 
 		lblAñoAcademicoVentanaGrupo = new JLabel("A\u00F1o acad\u00E9mico:");
@@ -97,11 +97,15 @@ public class VentanaGrupos extends JFrame {
 		txtAñoAcademicoVentanaGrupo.setColumns(10);
 		
 		btnModificar = new JButton("Modificar");
-		btnModificar.setBounds(184, 317, 89, 23);
+		btnModificar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnModificar.setBounds(328, 278, 89, 23);
 		contentPane.add(btnModificar);
 		
 		button_1 = new JButton("Eliminar");
-		button_1.setBounds(449, 317, 89, 23);
+		button_1.setBounds(427, 278, 89, 23);
 		contentPane.add(button_1);
 	}
 

@@ -23,13 +23,14 @@ public class MenuDirector extends JFrame {
 	private JButton btnNewButton_2;
 	private JButton btnNewButton_3;
 	private JButton btnNewButton_4;
+	private JButton btnEstudiantes;
 
 	/**
 	 * Create the frame.
 	 */
 	public MenuDirector() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 327);
+		setBounds(100, 100, 450, 403);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -41,7 +42,7 @@ public class MenuDirector extends JFrame {
 				controlador.MenuAVentanaCentros();
 			}
 		});
-		btnNewButton.setBounds(113, 25, 194, 42);
+		btnNewButton.setBounds(115, 64, 194, 42);
 		contentPane.add(btnNewButton);
 		
 		btnNewButton_1 = new JButton("Grupos\r\n");
@@ -50,7 +51,7 @@ public class MenuDirector extends JFrame {
 				controlador.MenuAVentanaGrupos();
 			}
 		});
-		btnNewButton_1.setBounds(113, 78, 194, 42);
+		btnNewButton_1.setBounds(115, 117, 194, 42);
 		contentPane.add(btnNewButton_1);
 		
 		btnNewButton_2 = new JButton("Ciclos");
@@ -59,7 +60,7 @@ public class MenuDirector extends JFrame {
 				controlador.MenuAVentanaCiclos();
 			}
 		});
-		btnNewButton_2.setBounds(113, 129, 194, 42);
+		btnNewButton_2.setBounds(115, 168, 194, 42);
 		contentPane.add(btnNewButton_2);
 		
 		btnNewButton_3 = new JButton("Empresas");
@@ -68,7 +69,7 @@ public class MenuDirector extends JFrame {
 				controlador.MenuAVentanaEmpresas();
 			}
 		});
-		btnNewButton_3.setBounds(113, 182, 194, 42);
+		btnNewButton_3.setBounds(115, 221, 194, 42);
 		contentPane.add(btnNewButton_3);
 		
 		btnNewButton_4 = new JButton("Tutor");
@@ -77,8 +78,17 @@ public class MenuDirector extends JFrame {
 				controlador.MenuAVentanaTutor();
 			}
 		});
-		btnNewButton_4.setBounds(113, 235, 194, 42);
+		btnNewButton_4.setBounds(115, 274, 194, 42);
 		contentPane.add(btnNewButton_4);
+		
+		btnEstudiantes = new JButton("Estudiantes");
+		btnEstudiantes.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.MenuDirAVistaAlumnos();
+			}
+		});
+		btnEstudiantes.setBounds(115, 11, 194, 42);
+		contentPane.add(btnEstudiantes);
 	}
 
 	public void setControlador(Controlador controlador2) {

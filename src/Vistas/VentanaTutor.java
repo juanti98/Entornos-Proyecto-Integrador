@@ -92,25 +92,25 @@ public class VentanaTutor extends JFrame {
 				controlador.VentanaTutorAAltaTutor();
 			}
 		});
-		btnAnadir.setBounds(401, 296, 133, 23);
+		btnAnadir.setBounds(258, 296, 133, 23);
 		contentPane.add(btnAnadir);
 		
 		JButton btnModificar = new JButton("Modificar");
-		btnModificar.setBounds(258, 296, 133, 23);
+		btnModificar.setBounds(401, 296, 133, 23);
 		contentPane.add(btnModificar);
 		
 		JButton btnEliminar = new JButton("Eliminar");
 		btnEliminar.setBounds(544, 296, 133, 23);
 		contentPane.add(btnEliminar);
 		
-		JButton btnVovler = new JButton("Vovler");
-		btnVovler.addActionListener(new ActionListener() {
+		JButton btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				controlador.botonVolverMenuDirector();
 			}
 		});
-		btnVovler.setBounds(115, 296, 133, 23);
-		contentPane.add(btnVovler);
+		btnVolver.setBounds(115, 296, 133, 23);
+		contentPane.add(btnVolver);
 	}
 
 	public void setControlador(Controlador controlador) {

@@ -116,7 +116,7 @@ public class VentanaCentros extends JFrame {
 				controlador.VentanaCentroAAltaCentro();
 			}
 		});
-		btnA.setBounds(452, 413, 136, 23);
+		btnA.setBounds(293, 413, 136, 23);
 		getContentPane().add(btnA);
 
 		lblDenominacionCentroVentanaCentro = new JLabel("Denominacion centro: ");
@@ -147,7 +147,7 @@ public class VentanaCentros extends JFrame {
 		txtNombreRepresentanteVentanaCentro.setColumns(10);
 		
 		btnModificar = new JButton("Modificar");
-		btnModificar.setBounds(289, 413, 136, 23);
+		btnModificar.setBounds(453, 413, 136, 23);
 		contentPane.add(btnModificar);
 		
 		lblDirectorcentro = new JLabel("Director Centro:");

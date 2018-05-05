@@ -24,7 +24,7 @@ import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
-public class VentanaEstudiantes extends JFrame {
+public class VentanaEstudiantesDirector extends JFrame {
 
 	private JPanel contentPane;
 	private JTable tableEstudiantes;
@@ -55,7 +55,7 @@ public class VentanaEstudiantes extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaEstudiantes() {
+	public VentanaEstudiantesDirector() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 423);
 		contentPane = new JPanel();
@@ -195,7 +195,7 @@ public class VentanaEstudiantes extends JFrame {
 		btnVolver = new JButton("Volver");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				controlador.botonVolverMenu();
+				controlador.botonCerrarEstudianteVolverDirector();
 			}
 		});
 		btnVolver.setBounds(10, 313, 89, 23);

@@ -39,7 +39,7 @@ public class VentanaCiclos extends JFrame {
 	
 	public VentanaCiclos() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 564, 323);
+		setBounds(100, 100, 572, 323);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -111,15 +111,15 @@ public class VentanaCiclos extends JFrame {
 				controlador.VentanaCiclosAAltaCiclos();
 			}
 		});
-		btnAñadir.setBounds(269, 246, 136, 23);
+		btnAñadir.setBounds(133, 246, 136, 23);
 		contentPane.add(btnAñadir);
 		
 		JButton btnModificar = new JButton("Modificar");
-		btnModificar.setBounds(127, 246, 136, 23);
+		btnModificar.setBounds(279, 246, 136, 23);
 		contentPane.add(btnModificar);
 		
 		JButton btnEliminar = new JButton("Eliminar");
-		btnEliminar.setBounds(416, 246, 122, 23);
+		btnEliminar.setBounds(425, 246, 122, 23);
 		contentPane.add(btnEliminar);
 	}
 
