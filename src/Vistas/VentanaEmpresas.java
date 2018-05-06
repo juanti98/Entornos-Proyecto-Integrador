@@ -64,11 +64,11 @@ public class VentanaEmpresas extends JFrame {
 		scrollPane.setViewportView(table);
 
 		lblNumConvenio = new JLabel("N\u00FAmero de convenio:");
-		lblNumConvenio.setBounds(170, 221, 108, 14);
+		lblNumConvenio.setBounds(45, 224, 176, 14);
 		getContentPane().add(lblNumConvenio);
 
 		txtNumConvenio = new JTextField();
-		txtNumConvenio.setBounds(291, 218, 86, 20);
+		txtNumConvenio.setBounds(217, 218, 188, 20);
 		getContentPane().add(txtNumConvenio);
 		txtNumConvenio.setHorizontalAlignment(SwingConstants.LEFT);
 		txtNumConvenio.setColumns(10);
@@ -83,20 +83,20 @@ public class VentanaEmpresas extends JFrame {
 		getContentPane().add(btnVolver);
 
 		lblDireccion = new JLabel("Direcci\u00F3n:");
-		lblDireccion.setBounds(489, 221, 139, 14);
+		lblDireccion.setBounds(448, 224, 172, 14);
 		getContentPane().add(lblDireccion);
 
 		txtDireccion = new JTextField();
-		txtDireccion.setBounds(578, 218, 92, 20);
+		txtDireccion.setBounds(630, 214, 183, 20);
 		getContentPane().add(txtDireccion);
 		txtDireccion.setColumns(10);
 		
 		JLabel lblNomEmpresa = new JLabel("Nombre empresa:");
-		lblNomEmpresa.setBounds(170, 247, 92, 14);
+		lblNomEmpresa.setBounds(45, 252, 176, 14);
 		contentPane.add(lblNomEmpresa);
 		
 		txtNomEmpresa = new JTextField();
-		txtNomEmpresa.setBounds(291, 244, 86, 20);
+		txtNomEmpresa.setBounds(217, 249, 188, 20);
 		contentPane.add(txtNomEmpresa);
 		txtNomEmpresa.setColumns(10);
 		
@@ -118,29 +118,29 @@ public class VentanaEmpresas extends JFrame {
 		contentPane.add(btnEliminar);
 		
 		JLabel lblFechaFirma = new JLabel("Fecha firma:");
-		lblFechaFirma.setBounds(170, 278, 67, 14);
+		lblFechaFirma.setBounds(45, 281, 176, 14);
 		contentPane.add(lblFechaFirma);
 		
 		txtFechaFirma = new JTextField();
-		txtFechaFirma.setBounds(291, 275, 86, 20);
+		txtFechaFirma.setBounds(217, 275, 188, 20);
 		contentPane.add(txtFechaFirma);
 		txtFechaFirma.setColumns(10);
 		
 		JLabel lblTutorEmpresa = new JLabel("Tutor empresa:");
-		lblTutorEmpresa.setBounds(489, 250, 86, 14);
+		lblTutorEmpresa.setBounds(448, 250, 172, 14);
 		contentPane.add(lblTutorEmpresa);
 		
 		txtTutorEmpresa = new JTextField();
-		txtTutorEmpresa.setBounds(578, 246, 92, 20);
+		txtTutorEmpresa.setBounds(630, 242, 183, 20);
 		contentPane.add(txtTutorEmpresa);
 		txtTutorEmpresa.setColumns(10);
 		
 		JLabel lblRepEmpresa = new JLabel("Representante empresa:");
-		lblRepEmpresa.setBounds(448, 278, 127, 14);
+		lblRepEmpresa.setBounds(448, 278, 172, 14);
 		contentPane.add(lblRepEmpresa);
 		
 		txtRepEmpresa = new JTextField();
-		txtRepEmpresa.setBounds(578, 275, 92, 20);
+		txtRepEmpresa.setBounds(630, 271, 183, 20);
 		contentPane.add(txtRepEmpresa);
 		txtRepEmpresa.setColumns(10);
 	}

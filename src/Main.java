@@ -7,6 +7,7 @@ import Vistas.AltaCentro;
 import Vistas.AltaCiclos;
 import Vistas.AltaEmpresa;
 import Vistas.AltaEstudiante;
+import Vistas.AltaEstudianteMenuDirector;
 import Vistas.AltaGrupo;
 import Vistas.AltaTutor;
 import Vistas.MenuDirector;
@@ -46,6 +47,7 @@ public class Main {
 		VentanaTutor VenTutor=new VentanaTutor();
 		AltaTutor AltaTutor=new AltaTutor();
 		VentanaEstudiantesDirector VentEstDir = new VentanaEstudiantesDirector();
+		AltaEstudianteMenuDirector AltEstuMenuDirector= new AltaEstudianteMenuDirector();
 
 	
 
@@ -66,6 +68,7 @@ public class Main {
 		VenTutor.setControlador(controlador);
 		AltaTutor.setControlador(controlador);
 		VentEstDir.setControlador(controlador);
+		AltEstuMenuDirector.setControlador(controlador);
 		
 		
 		controlador.setVentanaLogin(vistaInicial);
@@ -85,6 +88,7 @@ public class Main {
 		controlador.setVenTutor(VenTutor);
 		controlador.setAltaTutor(AltaTutor);
 		controlador.setVentEstDir(VentEstDir);
+		controlador.setAltEstuMenuDirector(AltEstuMenuDirector);
 		
 		vistaInicial.setVisible(true);
 		

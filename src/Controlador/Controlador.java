@@ -7,6 +7,7 @@ import Vistas.AltaCentro;
 import Vistas.AltaCiclos;
 import Vistas.AltaEmpresa;
 import Vistas.AltaEstudiante;
+import Vistas.AltaEstudianteMenuDirector;
 import Vistas.AltaGrupo;
 import Vistas.AltaTutor;
 import Vistas.MenuDirector;
@@ -45,6 +46,7 @@ public class Controlador {
 	private VentanaTutor VenTutor;
 	private AltaTutor AltTutor;
 	private VentanaEstudiantesDirector VentEstDir;
+	private AltaEstudianteMenuDirector AltEstuMenuDirector;
 
 	public void setVentanaLogin(VentanaLogin vistaInicial) {
 		this.VentLogin = vistaInicial;
@@ -283,6 +285,24 @@ public class Controlador {
 	public void botonCerrarEstudianteVolverDirector() {
 		VentEstDir.setVisible(false);
 		MenDirector.setVisible(true);
+	}
+
+	public void botonVolverVentanaEstudianteMenuDirector() {
+		AltEstuMenuDirector.setVisible(false);
+		VentEstDir.setVisible(true);
+		
+		
+	}
+
+	public void setAltEstuMenuDirector(AltaEstudianteMenuDirector altEstuMenuDirector) {
+		this.AltEstuMenuDirector=altEstuMenuDirector;
+		
+	}
+
+	public void VentEstuDirectorAAltaEstuMenuDirector() {
+		VentEstDir.setVisible(false);
+		AltEstuMenuDirector.setVisible(true);
+		
 	}
 
 }

@@ -111,7 +111,7 @@ public class VentanaEstudiantesDirector extends JFrame {
 		JButton btnAadirEstudiante = new JButton("Dar de Alta");
 		btnAadirEstudiante.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				controlador.irAAnadir();
+				controlador.VentEstuDirectorAAltaEstuMenuDirector();
 			}
 		});
 		btnAadirEstudiante.setBounds(109, 313, 122, 23);
